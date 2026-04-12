@@ -423,9 +423,7 @@ h1 em { font-weight: 400; font-style: italic; color: var(--earth); }
 /* ─── LANGUAGE ─── */
 [data-lang="et"] { display: none !important; }
 .lang-hide { display: none !important; }
-.lang-show { display: inline !important; }
-.lang-show-block { display: block !important; }
-.lang-show-flex { display: flex !important; }
+.lang-show { display: revert !important; }
 </style>
 </head>
 <body>
@@ -761,30 +759,17 @@ function setLang(lang) {
   var all = document.querySelectorAll('[data-lang]');
   for (var i = 0; i < all.length; i++) {
     var el = all[i];
-    var elLang = el.getAttribute('data-lang');
-    // Remove all lang classes first
-    el.classList.remove('lang-hide', 'lang-show', 'lang-show-block', 'lang-show-flex');
-    if (elLang === lang) {
-      // Show this element — determine correct display type
-      var tag = el.tagName.toLowerCase();
-      var parent = el.parentElement ? el.parentElement.tagName.toLowerCase() : '';
-      if (tag === 'div' && (el.classList.contains('offer-card') || el.classList.contains('pillar') || el.classList.contains('hero-pills'))) {
-        el.classList.add('lang-show-flex');
-      } else if (tag === 'div' || tag === 'p') {
-        el.classList.add('lang-show-block');
-      } else {
-        el.classList.add('lang-show');
-      }
+    el.classList.remove('lang-hide', 'lang-show');
+    if (el.getAttribute('data-lang') === lang) {
+      el.classList.add('lang-show');
     } else {
       el.classList.add('lang-hide');
     }
   }
-  // Update toggle buttons
   var btns = document.querySelectorAll('.lang-btn');
   for (var j = 0; j < btns.length; j++) {
     btns[j].classList.toggle('active', btns[j].textContent.trim() === lang.toUpperCase());
   }
-  // Update placeholder
   var input = document.getElementById('joinEmail');
   if (input) input.placeholder = lang === 'en' ? 'Your email address' : 'Sinu e-posti aadress';
   document.documentElement.lang = lang;

@@ -1,1613 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leegi Majak — A Lighthouse of Inner Warmth</title>
-  <meta name="description" content="Leegi Majak is a feminine world of joy, beauty, inspiration, and inner light for women who want to feel more alive, warm, and connected." />
-  <meta property="og:title" content="Leegi Majak — A Lighthouse of Inner Warmth" />
-  <meta property="og:description" content="A feminine world of joy, inspiration, beauty, and inner light." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://leegimajak.com" />
-  <link rel="canonical" href="https://leegimajak.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root{
-      --bg:#fffaf4;
-      --bg-2:#fff4ea;
-      --panel:#fffdf9;
-      --panel-2:rgba(255,255,255,0.72);
-      --panel-3:rgba(255,247,239,0.82);
-      --line:#efd8c8;
-      --line-2:rgba(141,92,67,0.12);
-
-      --text:#412c25;
-      --text-soft:#6b5146;
-      --text-muted:#8f6d5e;
-
-      --gold:#b88b47;
-      --gold-soft:#e8c897;
-      --rose:#db8560;
-      --rose-deep:#c96a56;
-      --peach:#f6d6bf;
-      --glow:rgba(219,133,96,0.18);
-
-      --shadow-lg:0 24px 70px rgba(98,54,30,0.10);
-      --shadow-md:0 14px 40px rgba(98,54,30,0.08);
-      --shadow-sm:0 8px 24px rgba(98,54,30,0.06);
-
-      --radius-xl:34px;
-      --radius-lg:24px;
-      --radius-md:18px;
-      --radius-sm:14px;
-
-      --container:1240px;
-      --transition:280ms ease;
-    }
-
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 12% 10%, rgba(255,214,170,0.45), transparent 28%),
-        radial-gradient(circle at 88% 12%, rgba(255,199,158,0.28), transparent 24%),
-        radial-gradient(circle at 50% 70%, rgba(255,235,220,0.8), transparent 36%),
-        linear-gradient(180deg, #fffaf4 0%, #fff7f1 40%, #fffaf4 100%);
-      overflow-x:hidden;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-      line-height:1.65;
-    }
-
-    ::selection{
-      background:#ffd9bf;
-      color:#3d2721;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    .container{
-      width:min(var(--container), calc(100% - 40px));
-      margin:0 auto;
-    }
-
-    @media (min-width: 820px){
-      .container{
-        width:min(var(--container), calc(100% - 80px));
-      }
-    }
-
-    .en,.et{display:none !important}
-    .lang-on{display:revert !important}
-    .lang-off{display:none !important}
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:11px;
-      letter-spacing:.28em;
-      text-transform:uppercase;
-      color:var(--gold);
-      font-weight:700;
-    }
-
-    .eyebrow::before{
-      content:"";
-      width:34px;
-      height:1px;
-      background:linear-gradient(90deg, transparent, var(--gold), transparent);
-      display:block;
-    }
-
-    .section{
-      position:relative;
-      padding:110px 0;
-    }
-
-    .section-tight{
-      padding-top:0;
-    }
-
-    .fade{
-      opacity:0;
-      transform:translateY(24px);
-      transition:opacity .8s ease, transform .8s ease;
-    }
-
-    .fade.in{
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    .site-shell{
-      position:relative;
-      isolation:isolate;
-    }
-
-    .site-shell::before,
-    .site-shell::after{
-      content:"";
-      position:fixed;
-      inset:auto;
-      width:420px;
-      height:420px;
-      border-radius:50%;
-      filter:blur(60px);
-      z-index:-2;
-      opacity:.35;
-      pointer-events:none;
-    }
-
-    .site-shell::before{
-      top:-100px;
-      left:-100px;
-      background:radial-gradient(circle, rgba(255,198,148,0.45), transparent 68%);
-    }
-
-    .site-shell::after{
-      bottom:-120px;
-      right:-120px;
-      background:radial-gradient(circle, rgba(236,153,117,0.24), transparent 68%);
-    }
-
-    .topbar{
-      padding:24px 0 12px;
-      position:sticky;
-      top:0;
-      z-index:40;
-      backdrop-filter:blur(16px);
-      -webkit-backdrop-filter:blur(16px);
-      background:linear-gradient(180deg, rgba(255,250,244,0.82), rgba(255,250,244,0.52));
-      border-bottom:1px solid rgba(215,182,159,0.14);
-    }
-
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-      min-width:max-content;
-    }
-
-    .brand-mark{
-      font-size:11px;
-      letter-spacing:.42em;
-      text-transform:uppercase;
-      color:var(--gold);
-      font-weight:700;
-    }
-
-    .brand-sub{
-      font-size:12px;
-      color:var(--text-muted);
-      letter-spacing:.08em;
-    }
-
-    .nav-right{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    .nav-links{
-      display:none;
-      align-items:center;
-      gap:22px;
-      color:var(--text-soft);
-      font-size:14px;
-    }
-
-    .nav-links a{
-      position:relative;
-      transition:color var(--transition);
-    }
-
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:-6px;
-      width:0;
-      height:1px;
-      background:var(--rose);
-      transition:width var(--transition);
-    }
-
-    .nav-links a:hover{
-      color:var(--rose-deep);
-    }
-
-    .nav-links a:hover::after{
-      width:100%;
-    }
-
-    @media (min-width: 920px){
-      .nav-links{
-        display:flex;
-      }
-    }
-
-    .lang-switch{
-      display:inline-flex;
-      align-items:center;
-      gap:2px;
-      padding:4px;
-      border:1px solid rgba(196,145,110,0.18);
-      background:rgba(255,255,255,0.58);
-      border-radius:999px;
-      box-shadow:var(--shadow-sm);
-    }
-
-    .lang-switch button{
-      border:none;
-      background:transparent;
-      color:var(--text-muted);
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      padding:8px 14px;
-      border-radius:999px;
-      cursor:pointer;
-      transition:all var(--transition);
-    }
-
-    .lang-switch button.on{
-      background:#ffffff;
-      color:var(--text);
-      box-shadow:0 8px 18px rgba(87,52,31,0.08);
-    }
-
-    .nav-cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      min-height:42px;
-      padding:0 18px;
-      border-radius:999px;
-      color:#fff;
-      background:linear-gradient(135deg, var(--rose), var(--rose-deep));
-      box-shadow:0 14px 28px rgba(201,106,86,0.26);
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      transition:transform var(--transition), box-shadow var(--transition);
-    }
-
-    .nav-cta:hover{
-      transform:translateY(-2px);
-      box-shadow:0 18px 34px rgba(201,106,86,0.30);
-    }
-
-    .hero{
-      position:relative;
-      padding:72px 0 84px;
-    }
-
-    .hero-grid{
-      display:grid;
-      gap:30px;
-      align-items:end;
-    }
-
-    @media (min-width: 1024px){
-      .hero-grid{
-        grid-template-columns: minmax(0, 1.12fr) minmax(380px, .88fr);
-        gap:42px;
-      }
-    }
-
-    .hero-copy{
-      position:relative;
-      z-index:2;
-      padding-top:26px;
-    }
-
-    .hero-title{
-      margin-top:24px;
-      font-family:'Cormorant Garamond', Georgia, serif;
-      font-size:clamp(3.2rem, 7vw, 6.4rem);
-      line-height:.95;
-      letter-spacing:-0.03em;
-      color:var(--text);
-      font-weight:400;
-      max-width:900px;
-    }
-
-    .hero-title em{
-      display:block;
-      font-style:italic;
-      font-weight:400;
-      color:#5a3e35;
-      margin-top:8px;
-    }
-
-    .hero-text{
-      margin-top:28px;
-      max-width:650px;
-      font-size:1.05rem;
-      line-height:1.95;
-      color:var(--text-soft);
-    }
-
-    .hero-actions{
-      margin-top:34px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      min-height:56px;
-      padding:0 24px;
-      border-radius:999px;
-      border:1px solid transparent;
-      transition:all var(--transition);
-      font-weight:600;
-      font-size:14px;
-    }
-
-    .btn-primary{
-      color:#fff;
-      background:linear-gradient(135deg, var(--rose), var(--rose-deep));
-      box-shadow:0 18px 40px rgba(201,106,86,0.28);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 22px 46px rgba(201,106,86,0.32);
-    }
-
-    .btn-secondary{
-      color:var(--text);
-      background:rgba(255,255,255,0.72);
-      border-color:rgba(196,145,110,0.18);
-      box-shadow:var(--shadow-sm);
-    }
-
-    .btn-secondary:hover{
-      background:#fff;
-      transform:translateY(-2px);
-    }
-
-    .hero-tags{
-      margin-top:34px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      max-width:740px;
-    }
-
-    .tag-pill{
-      display:inline-flex;
-      align-items:center;
-      min-height:38px;
-      padding:0 16px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.62);
-      border:1px solid rgba(196,145,110,0.16);
-      color:var(--text-muted);
-      font-size:12px;
-      font-weight:600;
-      box-shadow:var(--shadow-sm);
-    }
-
-    .hero-card-wrap{
-      position:relative;
-    }
-
-    .hero-card-wrap::before{
-      content:"";
-      position:absolute;
-      inset:auto auto 8% 8%;
-      width:72%;
-      height:72%;
-      background:radial-gradient(circle, rgba(240,188,152,0.28), transparent 70%);
-      filter:blur(22px);
-      z-index:0;
-    }
-
-    .hero-card{
-      position:relative;
-      z-index:1;
-      overflow:hidden;
-      border-radius:38px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,249,243,0.86)),
-        linear-gradient(135deg, rgba(255,223,195,0.3), rgba(255,255,255,0.1));
-      border:1px solid rgba(205,163,133,0.16);
-      box-shadow:var(--shadow-lg);
-      padding:28px;
-      min-height:560px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-    }
-
-    .hero-card::before{
-      content:"";
-      position:absolute;
-      top:-120px;
-      right:-120px;
-      width:300px;
-      height:300px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,215,170,0.42), transparent 68%);
-      pointer-events:none;
-    }
-
-    .hero-card::after{
-      content:"";
-      position:absolute;
-      bottom:-90px;
-      left:-90px;
-      width:220px;
-      height:220px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(219,133,96,0.15), transparent 68%);
-      pointer-events:none;
-    }
-
-    .card-top{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:18px;
-    }
-
-    .card-kicker{
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.22em;
-      color:var(--gold);
-      font-weight:700;
-    }
-
-    .card-number{
-      width:54px;
-      height:54px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:rgba(255,255,255,0.82);
-      border:1px solid rgba(184,139,71,0.16);
-      color:var(--gold);
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.18em;
-      box-shadow:var(--shadow-sm);
-      flex-shrink:0;
-    }
-
-    .card-quote{
-      margin-top:32px;
-      font-family:'Cormorant Garamond', Georgia, serif;
-      font-size:clamp(2rem, 3.4vw, 3rem);
-      line-height:1.06;
-      color:var(--text);
-      max-width:420px;
-    }
-
-    .card-quote em{
-      display:block;
-      font-style:italic;
-      color:#6f4b41;
-      margin-top:10px;
-    }
-
-    .card-line{
-      margin:28px 0 0;
-      width:100%;
-      height:1px;
-      background:linear-gradient(90deg, rgba(184,139,71,0), rgba(184,139,71,0.58), rgba(184,139,71,0));
-    }
-
-    .card-bottom{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:14px;
-      margin-top:28px;
-    }
-
-    .mini-panel{
-      border-radius:22px;
-      padding:18px;
-      background:rgba(255,255,255,0.72);
-      border:1px solid rgba(205,163,133,0.14);
-      box-shadow:var(--shadow-sm);
-      min-height:120px;
-    }
-
-    .mini-label{
-      font-size:10px;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:.22em;
-      color:var(--gold);
-    }
-
-    .mini-text{
-      margin-top:10px;
-      font-size:14px;
-      color:var(--text-soft);
-      line-height:1.7;
-    }
-
-    .intro-grid{
-      display:grid;
-      gap:30px;
-      align-items:start;
-    }
-
-    @media (min-width: 960px){
-      .intro-grid{
-        grid-template-columns:minmax(260px,.82fr) minmax(0,1.18fr);
-        gap:42px;
-      }
-    }
-
-    .title-block h2,
-    .center-title h2,
-    .join-title{
-      margin-top:18px;
-      font-family:'Cormorant Garamond', Georgia, serif;
-      font-size:clamp(2.3rem, 4vw, 4rem);
-      line-height:1.02;
-      font-weight:400;
-      letter-spacing:-0.03em;
-      color:var(--text);
-    }
-
-    .title-block h2 em,
-    .center-title h2 em,
-    .join-title em{
-      display:block;
-      font-style:italic;
-      color:#6f4b41;
-      margin-top:8px;
-    }
-
-    .text-stack p{
-      font-size:1.05rem;
-      color:var(--text-soft);
-      line-height:1.95;
-      margin-bottom:18px;
-      max-width:760px;
-    }
-
-    .text-stack p:last-child{
-      margin-bottom:0;
-    }
-
-    .feature-rail{
-      display:grid;
-      gap:18px;
-    }
-
-    @media (min-width: 760px){
-      .feature-rail{
-        grid-template-columns:repeat(3,minmax(0,1fr));
-      }
-    }
-
-    .feature-card{
-      position:relative;
-      overflow:hidden;
-      border-radius:30px;
-      padding:26px 24px 24px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,251,247,0.9));
-      border:1px solid rgba(205,163,133,0.14);
-      box-shadow:var(--shadow-md);
-      min-height:250px;
-      transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-    }
-
-    .feature-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 20px 52px rgba(98,54,30,0.12);
-      border-color:rgba(201,106,86,0.20);
-    }
-
-    .feature-card.feature-accent{
-      background:
-        linear-gradient(180deg, rgba(255,245,237,0.96), rgba(255,237,225,0.92));
-    }
-
-    .feature-index{
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:.28em;
-      text-transform:uppercase;
-      color:var(--gold);
-    }
-
-    .feature-card h3{
-      margin-top:16px;
-      font-family:'Cormorant Garamond', Georgia, serif;
-      font-size:2rem;
-      line-height:1.02;
-      font-weight:500;
-      color:var(--text);
-    }
-
-    .feature-card p{
-      margin-top:14px;
-      font-size:.98rem;
-      line-height:1.85;
-      color:var(--text-soft);
-    }
-
-    .atmosphere-band{
-      position:relative;
-      overflow:hidden;
-    }
-
-    .atmosphere-shell{
-      position:relative;
-      padding:40px;
-      border-radius:40px;
-      background:
-        linear-gradient(140deg, rgba(255,249,244,0.94), rgba(255,243,233,0.88));
-      border:1px solid rgba(205,163,133,0.15);
-      box-shadow:var(--shadow-lg);
-    }
-
-    .atmosphere-shell::before{
-      content:"";
-      position:absolute;
-      top:-90px;
-      right:-90px;
-      width:280px;
-      height:280px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,210,171,0.45), transparent 68%);
-      pointer-events:none;
-    }
-
-    .atmosphere-grid{
-      display:grid;
-      gap:28px;
-      align-items:start;
-    }
-
-    @media (min-width: 980px){
-      .atmosphere-grid{
-        grid-template-columns:minmax(0,1.06fr) minmax(340px,.94fr);
-        gap:38px;
-      }
-    }
-
-    .voice-card{
-      position:relative;
-      padding:30px;
-      border-radius:32px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,250,245,0.9));
-      border:1px solid rgba(205,163,133,0.16);
-      box-shadow:var(--shadow-md);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-    }
-
-    .voice-card blockquote{
-      margin-top:18px;
-      font-family:'Cormorant Garamond', Georgia, serif;
-      font-size:clamp(1.8rem, 3vw, 2.7rem);
-      line-height:1.16;
-      font-weight:400;
-      color:var(--text);
-    }
-
-    .voice-card p{
-      margin-top:18px;
-      color:var(--text-soft);
-      font-size:1rem;
-      line-height:1.9;
-    }
-
-    .center-title{
-      text-align:center;
-      max-width:860px;
-      margin:0 auto 46px;
-    }
-
-    .offer-grid{
-      display:grid;
-      gap:18px;
-    }
-
-    @media (min-width: 760px){
-      .offer-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-    }
-
-    @media (min-width: 1160px){
-      .offer-grid{
-        grid-template-columns:repeat(3,minmax(0,1fr));
-      }
-    }
-
-    .offer-card{
-      position:relative;
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      min-height:320px;
-      padding:24px;
-      border-radius:28px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,251,247,0.92));
-      border:1px solid rgba(205,163,133,0.14);
-      box-shadow:var(--shadow-md);
-      transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-    }
-
-    .offer-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 22px 58px rgba(98,54,30,0.12);
-      border-color:rgba(201,106,86,0.18);
-    }
-
-    .offer-card.featured{
-      background:
-        linear-gradient(180deg, rgba(255,241,232,0.98), rgba(255,232,217,0.94));
-      border-color:rgba(201,106,86,0.18);
-      box-shadow:0 24px 64px rgba(201,106,86,0.14);
-    }
-
-    .offer-badge{
-      position:absolute;
-      top:18px;
-      right:18px;
-      min-height:30px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:0 14px;
-      border-radius:999px;
-      background:linear-gradient(135deg, var(--rose), var(--gold));
-      color:#fff;
-      font-size:10px;
-      font-weight:800;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      box-shadow:0 12px 22px rgba(184,139,71,0.22);
-    }
-
-    .offer-head{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:16px;
-    }
-
-    .offer-card h3{
-      font-family:'Cormorant Garamond', Georgia, serif;
-      font-size:1.9rem;
-      line-height:1.02;
-      font-weight:500;
-      color:var(--text);
-      max-width:240px;
-    }
-
-    .price{
-      color:var(--rose-deep);
-      font-size:13px;
-      font-weight:800;
-      letter-spacing:.08em;
-      white-space:nowrap;
-      padding-top:4px;
-    }
-
-    .offer-card p{
-      margin-top:18px;
-      color:var(--text-soft);
-      font-size:.98rem;
-      line-height:1.85;
-      flex:1;
-    }
-
-    .offer-btn{
-      margin-top:22px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      width:100%;
-      border-radius:999px;
-      font-size:13px;
-      font-weight:700;
-      transition:all var(--transition);
-      text-align:center;
-    }
-
-    .offer-btn-primary{
-      background:linear-gradient(135deg, var(--rose), var(--rose-deep));
-      color:#fff;
-      box-shadow:0 12px 24px rgba(201,106,86,0.22);
-    }
-
-    .offer-btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 16px 30px rgba(201,106,86,0.28);
-    }
-
-    .offer-btn-secondary{
-      background:rgba(255,255,255,0.78);
-      color:var(--text);
-      border:1px solid rgba(205,163,133,0.15);
-    }
-
-    .offer-btn-secondary:hover{
-      background:#fff;
-      transform:translateY(-2px);
-    }
-
-    .join-shell{
-      position:relative;
-      overflow:hidden;
-      border-radius:42px;
-      padding:56px 24px;
-      background:
-        linear-gradient(135deg, rgba(255,247,239,0.96), rgba(255,238,226,0.92));
-      border:1px solid rgba(205,163,133,0.16);
-      box-shadow:var(--shadow-lg);
-      text-align:center;
-    }
-
-    @media (min-width: 780px){
-      .join-shell{
-        padding:70px 46px;
-      }
-    }
-
-    .join-shell::before{
-      content:"";
-      position:absolute;
-      top:-80px;
-      left:-80px;
-      width:240px;
-      height:240px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,210,171,0.42), transparent 70%);
-      pointer-events:none;
-    }
-
-    .join-shell::after{
-      content:"";
-      position:absolute;
-      bottom:-110px;
-      right:-110px;
-      width:300px;
-      height:300px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(219,133,96,0.18), transparent 70%);
-      pointer-events:none;
-    }
-
-    .join-inner{
-      position:relative;
-      z-index:1;
-      max-width:860px;
-      margin:0 auto;
-    }
-
-    .join-text{
-      margin:24px auto 0;
-      max-width:700px;
-      color:var(--text-soft);
-      font-size:1.05rem;
-      line-height:1.95;
-    }
-
-    .join-form{
-      margin:34px auto 0;
-      max-width:760px;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      padding:12px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.74);
-      border:1px solid rgba(205,163,133,0.16);
-      box-shadow:var(--shadow-md);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-    }
-
-    @media (min-width: 700px){
-      .join-form{
-        flex-direction:row;
-        align-items:center;
-      }
-    }
-
-    .join-form input{
-      flex:1;
-      min-width:0;
-      min-height:56px;
-      padding:0 22px;
-      border:none;
-      outline:none;
-      border-radius:999px;
-      background:#fffdfb;
-      font-size:15px;
-      color:var(--text);
-      box-shadow:inset 0 0 0 1px rgba(205,163,133,0.15);
-      font-family:'Inter',sans-serif;
-    }
-
-    .join-form input::placeholder{
-      color:#b28670;
-    }
-
-    .join-form input:focus{
-      box-shadow:inset 0 0 0 1px rgba(201,106,86,0.34), 0 0 0 4px rgba(219,133,96,0.08);
-    }
-
-    .join-submit{
-      min-width:200px;
-      min-height:56px;
-      border:none;
-      border-radius:999px;
-      padding:0 24px;
-      cursor:pointer;
-      font-size:14px;
-      font-weight:700;
-      color:#fff;
-      background:linear-gradient(135deg, var(--rose), var(--rose-deep));
-      box-shadow:0 16px 30px rgba(201,106,86,0.24);
-      transition:transform var(--transition), box-shadow var(--transition);
-    }
-
-    .join-submit:hover{
-      transform:translateY(-2px);
-      box-shadow:0 20px 36px rgba(201,106,86,0.30);
-    }
-
-    .join-note{
-      margin-top:20px;
-      color:var(--text-muted);
-      font-size:13px;
-      line-height:1.8;
-    }
-
-    footer{
-      padding:34px 0 46px;
-    }
-
-    .footer-shell{
-      border-top:1px solid rgba(205,163,133,0.16);
-      padding-top:22px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:10px;
-      text-align:center;
-      color:var(--text-muted);
-      font-size:13px;
-    }
-
-    .footer-credit{
-      font-size:11px;
-      color:#b18b76;
-      letter-spacing:.04em;
-    }
-
-    .footer-credit a{
-      color:var(--gold);
-      font-weight:700;
-    }
-
-    .footer-credit a:hover{
-      color:var(--rose-deep);
-    }
-
-    .orbs{
-      position:absolute;
-      inset:0;
-      overflow:hidden;
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .orb{
-      position:absolute;
-      border-radius:50%;
-      opacity:0;
-      animation:drift 11s ease-in-out infinite;
-      filter:blur(.5px);
-    }
-
-    @keyframes drift{
-      0%,100%{
-        opacity:0;
-        transform:translateY(0) scale(1);
-      }
-      20%{
-        opacity:.45;
-      }
-      55%{
-        opacity:.18;
-      }
-      50%{
-        transform:translateY(-44px) scale(1.18);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      *,
-      *::before,
-      *::after{
-        animation-duration:.01ms !important;
-        animation-iteration-count:1 !important;
-        transition-duration:.01ms !important;
-        scroll-behavior:auto !important;
-      }
-    }
-
-    @media (max-width: 699px){
-      .hero{
-        padding-top:42px;
-      }
-
-      .hero-title{
-        line-height:.98;
-      }
-
-      .hero-card{
-        min-height:auto;
-      }
-
-      .card-bottom{
-        grid-template-columns:1fr;
-      }
-
-      .section{
-        padding:84px 0;
-      }
-
-      .atmosphere-shell{
-        padding:28px;
-      }
-
-      .voice-card{
-        padding:24px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leegi Majak — A Lighthouse of Inner Warmth</title>
+<meta name="description" content="Leegi Majak is a feminine world of joy, beauty, inspiration, and inner light for women who want to feel more alive, warm, and connected.">
+<link rel="canonical" href="https://leegimajak.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+::selection { background: #EADED7; color: #2C2A28; }
+:root {
+  --bg: #FDFCF9;
+  --bg-alt: #F4F1EB;
+  --text: #2C2A28;
+  --text-light: #767069;
+  --accent: #B65C43;
+  --border: #E6E2DA;
+}
+body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.7; font-weight: 300; }
+h1, h2, h3, blockquote { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; line-height: 1.15; color: var(--text); }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+.et { display: none !important; }
+.lang-on { display: revert !important; }
+.lang-off { display: none !important; }
+.fade { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade.in { opacity: 1; transform: translateY(0); }
+.w { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+@media(min-width: 768px) { .w { padding: 0 40px; } }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 40px 0; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; letter-spacing: 0.05em; color: var(--accent); }
+.nr { display: flex; align-items: center; gap: 32px; }
+.nl { display: none; gap: 24px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-light); }
+.nl a:hover { color: var(--text); }
+@media(min-width: 768px) { .nl { display: flex; } }
+.lt { display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; }
+.lt button { border: none; background: none; font-size: 11px; cursor: pointer; color: var(--text-light); transition: 0.3s; padding-bottom: 2px; text-transform: uppercase; }
+.lt button.on { color: var(--text); border-bottom: 1px solid var(--text); }
+.btn-solid, .btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 14px 36px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; transition: all 0.4s ease; cursor: pointer; border-radius: 0; }
+.btn-solid { background: var(--text); color: var(--bg); border: 1px solid var(--text); }
+.btn-solid:hover { background: transparent; color: var(--text); }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { border-color: var(--text); }
+.hero { text-align: center; padding: 80px 0 120px; }
+.tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--text-light); display: block; margin-bottom: 24px; }
+.hero h1 { font-size: 3.2rem; color: var(--text); margin-bottom: 16px; max-width: 800px; margin-inline: auto; }
+.hero h1 em { display: block; font-style: italic; color: var(--accent); margin-top: 8px; }
+@media(min-width: 768px) { .hero h1 { font-size: 4.8rem; } }
+.hp { margin: 32px auto; font-size: 1.1rem; color: var(--text-light); max-width: 540px; line-height: 1.8; }
+.hbtns { margin-top: 48px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.pills { margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.pill { padding: 6px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); border: 1px solid var(--border); border-radius: 20px; }
+.sec { padding: 120px 0; border-top: 1px solid var(--border); }
+.sh { font-size: 2.4rem; margin-bottom: 40px; }
+.sh em { font-style: italic; color: var(--text-light); display: block; margin-top: 8px; }
+@media(min-width: 768px) { .sh { font-size: 3.6rem; } }
+.pg { display: grid; gap: 48px; }
+@media(min-width: 768px) { .pg { grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; } }
+.pt p { font-size: 1.05rem; color: var(--text-light); margin-bottom: 24px; line-height: 1.9; }
+.pls { display: grid; gap: 32px; padding-top: 40px; }
+@media(min-width: 768px) { .pls { grid-template-columns: repeat(3, 1fr); } }
+.pl { border-top: 1px solid var(--text); padding-top: 24px; }
+.pn { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--accent); display: block; margin-bottom: 16px; font-style: italic; }
+.pl h3 { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px; font-weight: 500; color: var(--text); }
+.pl p { font-size: 0.95rem; color: var(--text-light); line-height: 1.8; }
+.atm { background: var(--bg-alt); padding: 120px 0; }
+.ag { display: grid; gap: 60px; }
+@media(min-width: 768px) { .ag { grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; } }
+.al p { font-size: 1.05rem; color: var(--text-light); margin-bottom: 24px; line-height: 1.9; }
+.vc { padding: 48px; background: var(--bg); border: 1px solid var(--border); }
+.vc blockquote { font-size: 1.6rem; color: var(--text); margin-bottom: 24px; line-height: 1.4; }
+@media(min-width: 768px) { .vc blockquote { font-size: 2.2rem; } }
+.va { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); }
+.oh { text-align: center; margin-bottom: 80px; }
+.cd { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 32px 0; border-bottom: 1px solid var(--border); align-items: center; }
+.cd:first-child { border-top: 1px solid var(--border); }
+@media(min-width: 768px) { .cd { grid-template-columns: 2fr 3fr auto; gap: 40px; } }
+.cd h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--text); }
+.cd p { font-size: 0.95rem; color: var(--text-light); line-height: 1.6; margin: 0; }
+.cd-right { display: flex; align-items: center; gap: 32px; justify-content: space-between; }
+.pr { font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); }
+.cb { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; border: none; background: none; border-bottom: 1px solid var(--border); padding-bottom: 4px; cursor: pointer; transition: 0.3s; color: var(--text); white-space: nowrap; }
+.cb:hover { border-color: var(--text); color: var(--accent); }
+.jn { padding: 120px 0; text-align: center; background: var(--text); color: var(--bg); }
+.jn .sh, .jn .sh em { color: var(--bg); }
+.jn .tag { color: var(--text-light); }
+.js { max-width: 500px; margin: 32px auto; color: rgba(255,255,255,0.6); font-size: 1.05rem; }
+.jf { display: flex; flex-direction: column; max-width: 440px; margin: 40px auto 0; gap: 16px; }
+@media(min-width: 480px) { .jf { flex-direction: row; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 8px; gap: 0; } }
+.ji input { flex: 1; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: var(--bg); font-size: 1rem; outline: none; font-family: 'DM Sans', sans-serif; font-weight: 300; padding: 14px; text-align: center; }
+@media(min-width: 480px) { .ji input { border: none; padding: 8px; text-align: left; } }
+.ji input::placeholder { color: rgba(255,255,255,0.3); }
+.jb { background: var(--bg); color: var(--text); border: none; text-transform: uppercase; letter-spacing: 0.15em; font-size: 10px; cursor: pointer; transition: 0.3s; padding: 16px; }
+@media(min-width: 480px) { .jb { background: transparent; color: var(--bg); padding: 8px 16px; } .jb:hover { color: var(--accent); } }
+footer { padding: 40px 20px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); background: var(--bg); }
+.cr { margin-top: 12px; font-size: 10px; }
+.cr a { color: var(--text); transition: 0.3s; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+.cr a:hover { border-color: var(--text); }
+@media(max-width: 480px) {
+  .hero h1 { font-size: 2.6rem; }
+  .sh { font-size: 2.2rem; }
+  .cd-right { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+</style>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <div class="container">
-        <nav class="nav" aria-label="Main navigation">
-          <div class="brand">
-            <div class="brand-mark">Leegi Majak</div>
-            <div class="brand-sub en">A feminine world of light</div>
-            <div class="brand-sub et">Helge naiselik valguseruum</div>
-          </div>
 
-          <div class="nav-right">
-            <div class="nav-links">
-              <a href="#phil" class="en">About</a>
-              <a href="#phil" class="et">Meist</a>
-
-              <a href="#off" class="en">Offerings</a>
-              <a href="#off" class="et">Pakkumised</a>
-            </div>
-
-            <div class="lang-switch" role="group" aria-label="Language switch">
-              <button type="button" class="on" onclick="sl('en')" aria-label="English">EN</button>
-              <button type="button" onclick="sl('et')" aria-label="Eesti">ET</button>
-            </div>
-
-            <a href="#jn" class="nav-cta en">Join the Circle</a>
-            <a href="#jn" class="nav-cta et">Liitu ringiga</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero" role="banner">
-        <div class="orbs" id="orbs" aria-hidden="true"></div>
-
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-copy fade in">
-              <span class="eyebrow en">A lighthouse of inner warmth</span>
-              <span class="eyebrow et">Sisemise soojuse majakas</span>
-
-              <h1 class="hero-title en">Where inner fire<em>becomes visible light.</em></h1>
-              <h1 class="hero-title et">Kus sisemine tuli<em>saab nähtavaks valguseks.</em></h1>
-
-              <p class="hero-text en">
-                Leegi Majak is a feminine world of joy, inspiration, beauty, and inner light — for women who want to feel more alive without pressure, noise, or the need to perform.
-              </p>
-              <p class="hero-text et">
-                Leegi Majak on helge ja elav naiselik maailm — inspiratsioon, ilu, rõõm ja sisemine valgus neile, kes tahavad tunda end jälle elusana, ilma surve ja mürata.
-              </p>
-
-              <div class="hero-actions">
-                <a href="#jn" class="btn btn-primary en">Enter the Lighthouse <span>→</span></a>
-                <a href="#jn" class="btn btn-primary et">Tule sisse <span>→</span></a>
-
-                <a href="#phil" class="btn btn-secondary en">The story behind the name</a>
-                <a href="#phil" class="btn btn-secondary et">Nime lugu</a>
-              </div>
-
-              <div class="hero-tags en">
-                <span class="tag-pill">living warmth</span>
-                <span class="tag-pill">natural joy</span>
-                <span class="tag-pill">inner radiance</span>
-                <span class="tag-pill">gentle guidance</span>
-              </div>
-
-              <div class="hero-tags et">
-                <span class="tag-pill">päris soojus</span>
-                <span class="tag-pill">looduslik rõõm</span>
-                <span class="tag-pill">sisemine sära</span>
-                <span class="tag-pill">elujaatav kohalolu</span>
-              </div>
-            </div>
-
-            <div class="hero-card-wrap fade">
-              <div class="hero-card">
-                <div>
-                  <div class="card-top">
-                    <div>
-                      <div class="card-kicker en">The voice of Leegi</div>
-                      <div class="card-kicker et">Leegi hääl</div>
-                    </div>
-                    <div class="card-number">LM</div>
-                  </div>
-
-                  <div class="card-quote en">
-                    “I want to create a place
-                    <em>that reminds you there is still fire, beauty, and life within you.”</em>
-                  </div>
-
-                  <div class="card-quote et">
-                    “Ma tahan luua kohta,
-                    <em>mis meenutab sulle, et sinus on ikka veel tuli, ilu ja elu.”</em>
-                  </div>
-
-                  <div class="card-line"></div>
-                </div>
-
-                <div class="card-bottom">
-                  <div class="mini-panel">
-                    <div class="mini-label en">Atmosphere</div>
-                    <div class="mini-label et">Atmosfäär</div>
-
-                    <div class="mini-text en">Warmth instead of pressure. Presence instead of performance.</div>
-                    <div class="mini-text et">Soojus surve asemel. Kohalolu etendamise asemel.</div>
-                  </div>
-
-                  <div class="mini-panel">
-                    <div class="mini-label en">Essence</div>
-                    <div class="mini-label et">Olemus</div>
-
-                    <div class="mini-text en">A luminous, feminine world you want to return to.</div>
-                    <div class="mini-text et">Helge naiselik maailm, kuhu tahad tagasi tulla.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="phil">
-        <div class="container">
-          <div class="intro-grid">
-            <div class="title-block fade">
-              <span class="eyebrow en">Name philosophy</span>
-              <span class="eyebrow et">Nime filosoofia</span>
-
-              <h2 class="en">Leegi is the flame.<em>Majak is the lighthouse.</em></h2>
-              <h2 class="et">Leegi on tuli, mis põleb.<em>Majak on valgus, mis paistab.</em></h2>
-            </div>
-
-            <div class="text-stack fade">
-              <p class="en">
-                A flame is intimate, responsive, alive. It speaks to the inner spark that may have dimmed but has not disappeared. A lighthouse does not chase or shout — it stands, shines, and helps others see.
-              </p>
-              <p class="en">
-                Together they form something rare: living light that helps people find their way again. Not through pressure. Through warmth.
-              </p>
-
-              <p class="et">
-                Leek on intiimne, elav, vastutulelik. Ta räägib sellest sisemisest sädemest, mis võib olla tuhmunud, aga pole kustunud. Majakas ei sunni ega hüüa — ta seisab, paistab ja aitab teistel näha.
-              </p>
-              <p class="et">
-                Koos moodustavad nad midagi haruldast: elusa valguse, mis aitab inimestel jälle teed leida. Mitte surve kaudu. Soojuse kaudu.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-tight">
-        <div class="container">
-          <div class="feature-rail">
-            <article class="feature-card fade">
-              <div class="feature-index">01</div>
-              <h3 class="en">Inspiration</h3>
-              <h3 class="et">Inspiratsioon</h3>
-              <p class="en">Words, sights, and moments that lift the gaze and bring warmth back into the day.</p>
-              <p class="et">Sõnad, vaated ja hetked, mis tõstavad pilgu üles ja toovad päeva tagasi soojust.</p>
-            </article>
-
-            <article class="feature-card feature-accent fade">
-              <div class="feature-index">02</div>
-              <h3 class="en">Positivity</h3>
-              <h3 class="et">Helgus</h3>
-              <p class="en">Not false brightness, but genuine life-affirming energy that opens rather than diminishes.</p>
-              <p class="et">Mitte võlts helendus, vaid päris elujaatav energia, mis ei tee sind väiksemaks, vaid avab.</p>
-            </article>
-
-            <article class="feature-card fade">
-              <div class="feature-index">03</div>
-              <h3 class="en">Joy of Living</h3>
-              <h3 class="et">Elurõõm</h3>
-              <p class="en">Sun, nature, laughter, softness, playfulness, and the honest feeling that life is still alive.</p>
-              <p class="et">Päike, loodus, naer, vabadus, pehmus, mängulisus ja ehe tunne, et elu on veel elus.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section atmosphere-band">
-        <div class="container">
-          <div class="atmosphere-shell fade">
-            <div class="atmosphere-grid">
-              <div>
-                <div class="title-block">
-                  <span class="eyebrow en">What lives here</span>
-                  <span class="eyebrow et">Mis siin elab</span>
-
-                  <h2 class="en">This is not another teaching.<em>This is an atmosphere you want to return to.</em></h2>
-                  <h2 class="et">See ei ole järjekordne õpetus.<em>See on atmosfäär, kuhu tahad tagasi tulla.</em></h2>
-                </div>
-
-                <div class="text-stack" style="margin-top:28px;">
-                  <p class="en">
-                    Inside the Lighthouse live inspiring stories, life-affirming reflections, natural beauty, gentle feminine radiance, and the kind of energy that doesn't push — it opens the heart.
-                  </p>
-                  <p class="en">
-                    You don't need to perform anything here. You can be real, joyful, tired, hopeful, or still on your way. The Lighthouse doesn't force. It simply shines.
-                  </p>
-
-                  <p class="et">
-                    Leegi Majakis kohtuvad inspireerivad lood, elujaatavad mõtted, looduse ilu, õrn naiselik sära ja selline energia, mis ei suru, vaid avab südant.
-                  </p>
-                  <p class="et">
-                    Siin ei pea midagi etendama. Võib olla päris, rõõmus, väsinud, lootusrikas või alles teel. Majakas ei sunni. Ta lihtsalt paistab.
-                  </p>
-                </div>
-              </div>
-
-              <div class="voice-card">
-                <span class="eyebrow en">The voice of Leegi</span>
-                <span class="eyebrow et">Leegi hääl</span>
-
-                <blockquote class="en">
-                  “I want to create a place that doesn't tell you that you're broken. I want to create a place that reminds you there is still fire, beauty, and life within you.”
-                </blockquote>
-
-                <blockquote class="et">
-                  “Ma tahan luua kohta, mis ei räägi sulle, et sa oled katki. Ma tahan luua kohta, mis meenutab sulle, et sinus on ikka veel tuli, ilu ja elu.”
-                </blockquote>
-
-                <p class="en">
-                  This is the heart of Leegi Majak: not to fix a person, but to help her feel again that within her there is something warm, alive, and carrying light.
-                </p>
-
-                <p class="et">
-                  See ongi Leegi Majaka süda: mitte parandada inimest, vaid aidata tal jälle tunda, et temas endas on midagi sooja, elusat ja valgust kandvat alles.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="off">
-        <div class="container">
-          <div class="center-title fade">
-            <span class="eyebrow en">Offerings</span>
-            <span class="eyebrow et">Pakkumised</span>
-
-            <h2 class="en">Gifts from the Lighthouse</h2>
-            <h2 class="et">Majaka kingitused</h2>
-          </div>
-
-          <div class="offer-grid">
-            <article class="offer-card fade">
-              <div class="offer-head">
-                <h3 class="en">The Lighthouse Letter</h3>
-                <h3 class="et">Majaka kiri</h3>
-                <div class="price en">Free</div>
-                <div class="price et">Tasuta</div>
-              </div>
-
-              <p class="en">A weekly signal of warmth: luminous micro-essays, visual notes, seasonal reflections. No noise. Just light.</p>
-              <p class="et">Iganädalane soojusesignaal: helged lühiesseed, visuaalsed noodid, hooajalised mõtisklused.</p>
-
-              <a href="#jn" class="offer-btn offer-btn-secondary en">Subscribe free</a>
-              <a href="#jn" class="offer-btn offer-btn-secondary et">Liitu tasuta</a>
-            </article>
-
-            <article class="offer-card featured fade">
-              <div class="offer-badge en">Most Popular</div>
-              <div class="offer-badge et">Populaarseim</div>
-
-              <div class="offer-head">
-                <h3 class="en">The Inner Flame Circle</h3>
-                <h3 class="et">Sisemise Leegi Ring</h3>
-                <div class="price en">$9/month</div>
-                <div class="price et">$9/kuu</div>
-              </div>
-
-              <p class="en">Deeper letters, seasonal ritual guides, curated visual collections, and a private space of warmth.</p>
-              <p class="et">Sügavamad kirjad, hooajalised rituaalijuhised, kureeritud visuaalsed kollektsioonid ja privaatne soojusruum.</p>
-
-              <a href="#jn" class="offer-btn offer-btn-primary en">Join the Circle</a>
-              <a href="#jn" class="offer-btn offer-btn-primary et">Liitu ringiga</a>
-            </article>
-
-            <article class="offer-card fade">
-              <div class="offer-head">
-                <h3 class="en">Seasonal Reflection Journal</h3>
-                <h3 class="et">Hooajaline päevik</h3>
-                <div class="price">$12</div>
-              </div>
-
-              <p class="en">A beautifully designed PDF journal for each season. Prompts for presence, gratitude, and inner light.</p>
-              <p class="et">Kaunilt kujundatud PDF-päevik igaks hooajaks.</p>
-
-              <a href="#jn" class="offer-btn offer-btn-secondary en">Get the Journal</a>
-              <a href="#jn" class="offer-btn offer-btn-secondary et">Hangi päevik</a>
-            </article>
-
-            <article class="offer-card fade">
-              <div class="offer-head">
-                <h3 class="en">The Warmth Deck</h3>
-                <h3 class="et">Soojusekaardid</h3>
-                <div class="price">$18</div>
-              </div>
-
-              <p class="en">40 luminous inspiration cards. Each one a small flame. For mornings, difficult days, or quiet moments.</p>
-              <p class="et">40 helget inspiratsioonikaarti. Iga kaart on väike leek.</p>
-
-              <a href="#jn" class="offer-btn offer-btn-secondary en">Get the Deck</a>
-              <a href="#jn" class="offer-btn offer-btn-secondary et">Hangi kaardid</a>
-            </article>
-
-            <article class="offer-card fade">
-              <div class="offer-head">
-                <h3 class="en">30-Day Luminous Reset</h3>
-                <h3 class="et">30-päevane uus häälestus</h3>
-                <div class="price">$29</div>
-              </div>
-
-              <p class="en">A month-long guided journey back to aliveness. Daily micro-rituals, reflections, and audio warmth.</p>
-              <p class="et">Kuupikkune juhitud teekond tagasi elavuse juurde.</p>
-
-              <a href="#jn" class="offer-btn offer-btn-secondary en">Begin the Reset</a>
-              <a href="#jn" class="offer-btn offer-btn-secondary et">Alusta teekonda</a>
-            </article>
-
-            <article class="offer-card fade">
-              <div class="offer-head">
-                <h3 class="en">Personal Flame Reading</h3>
-                <h3 class="et">Isiklik tulelugemine</h3>
-                <div class="price">$79</div>
-              </div>
-
-              <p class="en">A written personal reflection based on your life story. Intimate, poetic, deeply personal.</p>
-              <p class="et">Kirjalik isiklik mõtisklus sinu eluloo põhjal. Intiimne, poeetiline, sügavalt isiklik.</p>
-
-              <a href="#jn" class="offer-btn offer-btn-secondary en">Request a Reading</a>
-              <a href="#jn" class="offer-btn offer-btn-secondary et">Telli lugemine</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="jn">
-        <div class="container">
-          <div class="join-shell fade">
-            <div class="join-inner">
-              <span class="eyebrow en">Join</span>
-              <span class="eyebrow et">Liitu</span>
-
-              <h2 class="join-title en">Come where warm light<em>helps you see the way again.</em></h2>
-              <h2 class="join-title et">Tule sinna,<em>kus soe valgus aitab jälle suunda näha.</em></h2>
-
-              <p class="join-text en">
-                Join the Lighthouse Letter and receive inspiring reflections, life-affirming moments, and small signals of light that bring more joy into your day.
-              </p>
-              <p class="join-text et">
-                Liitu majaka kirjaga ja saa aeg-ajalt inspireerivaid mõtteid, elujaatavaid hetki ja väikseid valgusemärke.
-              </p>
-
-              <div class="join-form">
-                <input type="email" id="em" placeholder="Your email address" aria-label="Email" />
-                <button type="button" class="join-submit" onclick="dj()">
-                  <span class="en">Join the Letter</span>
-                  <span class="et">Liitu kirjaga</span>
-                </button>
-              </div>
-
-              <p class="join-note en">Sunshine. Warmth. Inspiration. No excess noise.</p>
-              <p class="join-note et">Päike. Soojus. Inspiratsioon. Mitte mingit liigset müra.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <div class="footer-shell">
-          <div class="en">Leegi Majak © 2026 · A warm light that helps you see the way again</div>
-          <div class="et">Leegi Majak © 2026 · soe valgus, mis aitab jälle teed näha</div>
-
-          <div class="footer-credit">
-            <span class="en">Built by</span>
-            <span class="et">Loodud</span>
-            <a href="https://stardi.me" target="_blank" rel="noopener">stardi.me</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    let L = 'en';
-
-    function sl(lang){
-      L = lang;
-
-      const en = document.querySelectorAll('.en');
-      const et = document.querySelectorAll('.et');
-
-      if(lang === 'en'){
-        en.forEach(el => {
-          el.classList.remove('lang-off');
-          el.classList.add('lang-on');
-        });
-        et.forEach(el => {
-          el.classList.remove('lang-on');
-          el.classList.add('lang-off');
-        });
-      } else {
-        en.forEach(el => {
-          el.classList.remove('lang-on');
-          el.classList.add('lang-off');
-        });
-        et.forEach(el => {
-          el.classList.remove('lang-off');
-          el.classList.add('lang-on');
-        });
-      }
-
-      document.documentElement.lang = lang;
-
-      const buttons = document.querySelectorAll('.lang-switch button');
-      buttons.forEach(btn => {
-        btn.classList.toggle('on', btn.textContent.trim().toLowerCase() === lang);
-      });
-
-      const emailInput = document.getElementById('em');
-      if(emailInput){
-        emailInput.placeholder = lang === 'en' ? 'Your email address' : 'Sinu e-posti aadress';
-      }
-    }
-
-    function dj(){
-      const input = document.getElementById('em');
-      const value = input.value.trim();
-
-      if(value && value.includes('@')){
-        alert(
-          L === 'en'
-            ? 'Thank you! You are now on the Lighthouse list. ☀️'
-            : 'Aitäh! Sa oled nüüd Majaka nimekirjas. ☀️'
-        );
-        input.value = '';
-      }
-    }
-
-    (function createOrbs(){
-      const holder = document.getElementById('orbs');
-      if(!holder) return;
-
-      const colors = [
-        'rgba(255,212,172,0.65)',
-        'rgba(242,178,131,0.50)',
-        'rgba(255,231,208,0.75)',
-        'rgba(219,133,96,0.30)'
-      ];
-
-      for(let i = 0; i < 12; i++){
-        const orb = document.createElement('span');
-        orb.className = 'orb';
-
-        const size = Math.random() * 10 + 6;
-        const left = Math.random() * 100;
-        const top = Math.random() * 100;
-        const delay = Math.random() * 5;
-        const duration = Math.random() * 6 + 8;
-        const color = colors[i % colors.length];
-
-        orb.style.width = `${size}px`;
-        orb.style.height = `${size}px`;
-        orb.style.left = `${left}%`;
-        orb.style.top = `${top}%`;
-        orb.style.background = `radial-gradient(circle, ${color} 0%, transparent 72%)`;
-        orb.style.animationDelay = `${delay}s`;
-        orb.style.animationDuration = `${duration}s`;
-
-        holder.appendChild(orb);
-      }
-    })();
-
-    (function revealOnScroll(){
-      const items = document.querySelectorAll('.fade');
-      if(!('IntersectionObserver' in window)){
-        items.forEach(el => el.classList.add('in'));
-        return;
-      }
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('in');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      items.forEach(el => observer.observe(el));
-    })();
-
-    sl('en');
-  </script>
+<section class="hero" role="banner">
+<div class="w">
+<nav role="navigation" aria-label="Main">
+<div class="logo">Leegi Majak</div>
+<div class="nr">
+<div class="nl">
+<a href="#phil" class="en">About</a><a href="#phil" class="et">Meist</a>
+<a href="#off" class="en">Offerings</a><a href="#off" class="et">Pakkumised</a>
+</div>
+<div class="lt" role="group" aria-label="Language">
+<button type="button" class="on" onclick="sl('en')" aria-label="English">EN</button>
+<button type="button" onclick="sl('et')" aria-label="Eesti">ET</button>
+</div>
+</div>
+</nav>
+
+<div class="fade in">
+<span class="tag en">A lighthouse of inner warmth</span>
+<span class="tag et">Sisemise soojuse majakas</span>
+<h1 class="en">Where inner fire<em>becomes visible light.</em></h1>
+<h1 class="et">Kus sisemine tuli<em>saab nähtavaks valguseks.</em></h1>
+<p class="hp en">Leegi Majak is a feminine world of joy, inspiration, beauty, and inner light — for women who want to feel more alive without pressure, noise, or the need to perform.</p>
+<p class="hp et">Leegi Majak on helge ja elav naiselik maailm — inspiratsioon, ilu, rõõm ja sisemine valgus neile, kes tahavad tunda end jälle elusana, ilma surve ja mürata.</p>
+<div class="hbtns">
+<a href="#jn" class="btn-solid en">Enter the Lighthouse</a>
+<a href="#jn" class="btn-solid et">Tule sisse</a>
+<a href="#phil" class="btn-outline en">The story behind the name</a>
+<a href="#phil" class="btn-outline et">Nime lugu</a>
+</div>
+<div class="pills en"><span class="pill">living warmth</span><span class="pill">natural joy</span><span class="pill">inner radiance</span><span class="pill">gentle guidance</span></div>
+<div class="pills et"><span class="pill">päris soojus</span><span class="pill">looduslik rõõm</span><span class="pill">sisemine sära</span><span class="pill">elujaatav kohalolu</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="phil">
+<div class="w"><div class="pg">
+<div class="fade">
+<span class="tag en" style="margin-bottom:16px;">Name philosophy</span><span class="tag et" style="margin-bottom:16px;">Nime filosoofia</span>
+<h2 class="sh en">Leegi is the flame.<em>Majak is the lighthouse.</em></h2>
+<h2 class="sh et">Leegi on tuli, mis põleb.<em>Majak on valgus, mis paistab.</em></h2>
+</div>
+<div class="pt fade">
+<p class="en">A flame is intimate, responsive, alive. It speaks to the inner spark that may have dimmed but has not disappeared. A lighthouse does not chase or shout — it stands, shines, and helps others see.</p>
+<p class="en">Together they form something rare: living light that helps people find their way again. Not through pressure. Through warmth.</p>
+<p class="et">Leek on intiimne, elav, vastutulelik. Ta räägib sellest sisemisest sädemest, mis võib olla tuhmunud, aga pole kustunud. Majakas ei sunni ega hüüa — ta seisab, paistab ja aitab teistel näha.</p>
+<p class="et">Koos moodustavad nad midagi haruldast: elusa valguse, mis aitab inimestel jälle teed leida. Mitte surve kaudu. Soojuse kaudu.</p>
+</div>
+</div></div>
+</section>
+
+<section class="sec" style="padding-top:0; border-top:none;">
+<div class="w">
+<div class="pls en" id="pl-en">
+<div class="pl fade"><span class="pn">I</span><h3>Inspiration</h3><p>Words, sights, and moments that lift the gaze and bring warmth back into the day.</p></div>
+<div class="pl fade"><span class="pn">II</span><h3>Positivity</h3><p>Not false brightness, but genuine life-affirming energy that opens rather than diminishes.</p></div>
+<div class="pl fade"><span class="pn">III</span><h3>Joy of Living</h3><p>Sun, nature, laughter, softness, playfulness, and the honest feeling that life is still alive.</p></div>
+</div>
+<div class="pls et" id="pl-et">
+<div class="pl fade"><span class="pn">I</span><h3>Inspiratsioon</h3><p>Sõnad, vaated ja hetked, mis tõstavad pilgu üles ja toovad päeva tagasi soojust.</p></div>
+<div class="pl fade"><span class="pn">II</span><h3>Helgus</h3><p>Mitte võlts helendus, vaid päris elujaatav energia, mis ei tee sind väiksemaks, vaid avab.</p></div>
+<div class="pl fade"><span class="pn">III</span><h3>Elurõõm</h3><p>Päike, loodus, naer, vabadus, pehmus, mängulisus ja ehe tunne, et elu on veel elus.</p></div>
+</div>
+</div>
+</section>
+
+<section class="atm">
+<div class="w"><div class="ag">
+<div class="al fade">
+<span class="tag en" style="margin-bottom:16px;">What lives here</span><span class="tag et" style="margin-bottom:16px;">Mis siin elab</span>
+<h2 class="sh en">This is not another teaching.<em>This is an atmosphere you want to return to.</em></h2>
+<h2 class="sh et">See ei ole järjekordne õpetus.<em>See on atmosfäär, kuhu tahad tagasi tulla.</em></h2>
+<div style="margin-top:32px">
+<p class="en">Inside the Lighthouse live inspiring stories, life-affirming reflections, natural beauty, gentle feminine radiance, and the kind of energy that doesn't push — it opens the heart.</p>
+<p class="en">You don't need to perform anything here. You can be real, joyful, tired, hopeful, or still on your way. The Lighthouse doesn't force. It simply shines.</p>
+<p class="et">Leegi Majakis kohtuvad inspireerivad lood, elujaatavad mõtted, looduse ilu, õrn naiselik sära ja selline energia, mis ei suru, vaid avab südant.</p>
+<p class="et">Siin ei pea midagi etendama. Võib olla päris, rõõmus, väsinud, lootusrikas või alles teel. Majakas ei sunni. Ta lihtsalt paistab.</p>
+</div>
+</div>
+<div class="fade">
+<div class="vc">
+<blockquote class="en">"I want to create a place that doesn't tell you that you're broken. I want to create a place that reminds you there is still fire, beauty, and life within you."</blockquote>
+<blockquote class="et">"Ma tahan luua kohta, mis ei räägi sulle, et sa oled katki. Ma tahan luua kohta, mis meenutab sulle, et sinus on ikka veel tuli, ilu ja elu."</blockquote>
+<p class="va en">The voice of Leegi</p>
+<p class="va et">Leegi hääl</p>
+</div>
+</div>
+</div></div>
+</section>
+
+<section class="sec" id="off">
+<div class="w">
+<div class="oh fade">
+<span class="tag en">Offerings</span><span class="tag et">Pakkumised</span>
+<h2 class="sh en" style="margin-bottom:0;">Gifts from the Lighthouse</h2>
+<h2 class="sh et" style="margin-bottom:0;">Majaka kingitused</h2>
+</div>
+<div class="og en" id="og-en">
+<div class="cd fade"><h3>The Lighthouse Letter</h3><p>A weekly signal of warmth: luminous micro-essays, visual notes, seasonal reflections. No noise. Just light.</p><div class="cd-right"><span class="pr">Free</span><a href="#jn" class="cb">Subscribe</a></div></div>
+<div class="cd fade"><h3>The Inner Flame Circle</h3><p>Deeper letters, seasonal ritual guides, curated visual collections, and a private space of warmth.</p><div class="cd-right"><span class="pr">$9/mo</span><a href="#jn" class="cb">Join Circle</a></div></div>
+<div class="cd fade"><h3>Seasonal Reflection Journal</h3><p>A beautifully designed PDF journal for each season. Prompts for presence, gratitude, and inner light.</p><div class="cd-right"><span class="pr">$12</span><a href="#jn" class="cb">Get Journal</a></div></div>
+<div class="cd fade"><h3>The Warmth Deck</h3><p>40 luminous inspiration cards. Each one a small flame. For mornings, difficult days, or quiet moments.</p><div class="cd-right"><span class="pr">$18</span><a href="#jn" class="cb">Get Deck</a></div></div>
+<div class="cd fade"><h3>30-Day Luminous Reset</h3><p>A month-long guided journey back to aliveness. Daily micro-rituals, reflections, and audio warmth.</p><div class="cd-right"><span class="pr">$29</span><a href="#jn" class="cb">Begin Reset</a></div></div>
+<div class="cd fade"><h3>Personal Flame Reading</h3><p>A written personal reflection based on your life story. Intimate, poetic, deeply personal.</p><div class="cd-right"><span class="pr">$79</span><a href="#jn" class="cb">Request</a></div></div>
+</div>
+<div class="og et" id="og-et">
+<div class="cd fade"><h3>Majaka kiri</h3><p>Iganädalane soojusesignaal: helged lühiesseed, visuaalsed noodid, hooajalised mõtisklused.</p><div class="cd-right"><span class="pr">Tasuta</span><a href="#jn" class="cb">Liitu tasuta</a></div></div>
+<div class="cd fade"><h3>Sisemise Leegi Ring</h3><p>Sügavamad kirjad, hooajalised rituaalijuhised, kureeritud visuaalsed kollektsioonid ja privaatne soojusruum.</p><div class="cd-right"><span class="pr">9€ / kuu</span><a href="#jn" class="cb">Liitu ringiga</a></div></div>
+<div class="cd fade"><h3>Hooajaline päevik</h3><p>Kaunilt kujundatud PDF-päevik igaks hooajaks. Küsimused kohaloluks ja tänulikkuseks.</p><div class="cd-right"><span class="pr">12€</span><a href="#jn" class="cb">Hangi päevik</a></div></div>
+<div class="cd fade"><h3>Soojusekaardid</h3><p>40 helget inspiratsioonikaarti. Iga kaart on väike leek hommikuks või raskeks päevaks.</p><div class="cd-right"><span class="pr">18€</span><a href="#jn" class="cb">Hangi kaardid</a></div></div>
+<div class="cd fade"><h3>30-päevane uus häälestus</h3><p>Kuupikkune juhitud teekond tagasi elavuse juurde.</p><div class="cd-right"><span class="pr">29€</span><a href="#jn" class="cb">Alusta teekonda</a></div></div>
+<div class="cd fade"><h3>Isiklik tulelugemine</h3><p>Kirjalik isiklik mõtisklus sinu eluloo põhjal. Intiimne, poeetiline, sügavalt isiklik.</p><div class="cd-right"><span class="pr">79€</span><a href="#jn" class="cb">Telli lugemine</a></div></div>
+</div>
+</div>
+</section>
+
+<section class="jn" id="jn">
+<div class="w"><div class="ji fade">
+<span class="tag en" style="color:var(--text-light);">Join</span><span class="tag et" style="color:var(--text-light);">Liitu</span>
+<h2 class="sh en">Come where warm light<br><em>helps you see the way again.</em></h2>
+<h2 class="sh et">Tule sinna, kus soe valgus<br><em>aitab jälle suunda näha.</em></h2>
+<p class="js en">Join the Lighthouse Letter and receive inspiring reflections, life-affirming moments, and small signals of light.</p>
+<p class="js et">Liitu majaka kirjaga ja saa aeg-ajalt inspireerivaid mõtteid, elujaatavaid hetki ja väikseid valgusemärke.</p>
+<div class="jf">
+<input type="email" id="em" placeholder="Your email address" aria-label="Email">
+<button type="button" class="jb" onclick="dj()"><span class="en">Subscribe</span><span class="et">Liitu</span></button>
+</div>
+</div></div>
+</section>
+
+<footer>
+<div class="en">Leegi Majak © 2026 · A warm light that helps you see the way again</div>
+<div class="et">Leegi Majak © 2026 · Soe valgus, mis aitab jälle teed näha</div>
+<div class="cr"><span class="en">Built by</span><span class="et">Loodud</span> <a href="https://stardi.me" target="_blank" rel="noopener">stardi.me</a></div>
+</footer>
+
+<script>
+var L='en';
+function sl(l){
+  L=l;
+  var a=document.querySelectorAll('.en'), b=document.querySelectorAll('.et'), i;
+  if(l==='en'){
+    for(i=0;i<a.length;i++){a[i].classList.remove('lang-off');a[i].classList.add('lang-on');}
+    for(i=0;i<b.length;i++){b[i].classList.remove('lang-on');b[i].classList.add('lang-off');}
+  }else{
+    for(i=0;i<a.length;i++){a[i].classList.remove('lang-on');a[i].classList.add('lang-off');}
+    for(i=0;i<b.length;i++){b[i].classList.remove('lang-off');b[i].classList.add('lang-on');}
+  }
+  var t=document.querySelectorAll('.lt button');
+  for(i=0;i<t.length;i++) t[i].className=t[i].textContent.trim()===l.toUpperCase()?'on':'';
+  var x=document.getElementById('em');
+  if(x) x.placeholder=l==='en'?'Your email address':'Sinu e-posti aadress';
+  document.documentElement.lang=l;
+}
+var f=document.querySelectorAll('.fade'), o=new IntersectionObserver(function(e){
+  for(var i=0;i<e.length;i++) if(e[i].isIntersecting) e[i].target.classList.add('in');
+},{threshold: 0.15});
+for(var i=0;i<f.length;i++) o.observe(f[i]);
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+});
+function dj(){
+  var e=document.getElementById('em').value;
+  if(e && e.indexOf('@')>0){
+    alert(L==='en'?'Thank you! You are now on the Lighthouse list.':'Aitäh! Sa oled nüüd majaka nimekirjas.');
+    document.getElementById('em').value='';
+  }
+}
+sl('en');
+</script>
 </body>
 </html>

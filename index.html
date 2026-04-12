@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-/* Reset & Base */
 *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
 ::selection { background: #EADED7; color: #2C2A28; }
 :root {
@@ -32,7 +31,6 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .w { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 @media(min-width: 768px) { .w { padding: 0 40px; } }
 
-/* Navigatsioon */
 nav { display: flex; align-items: center; justify-content: space-between; padding: 40px 0; }
 .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; letter-spacing: 0.05em; color: var(--accent); }
 .nr { display: flex; align-items: center; gap: 32px; }
@@ -49,7 +47,6 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn-outline:hover { border-color: var(--text); }
 
-/* Hero */
 .hero { text-align: center; padding: 80px 0 120px; }
 .tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--text-light); display: block; margin-bottom: 24px; }
 .hero h1 { font-size: 3.2rem; color: var(--text); margin-bottom: 16px; max-width: 800px; margin-inline: auto; }
@@ -60,7 +57,6 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .pills { margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .pill { padding: 6px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); border: 1px solid var(--border); border-radius: 20px; }
 
-/* Sektsioonid */
 .sec { padding: 120px 0; border-top: 1px solid var(--border); }
 .sh { font-size: 2.4rem; margin-bottom: 40px; }
 .sh em { font-style: italic; color: var(--text-light); display: block; margin-top: 8px; }
@@ -76,12 +72,10 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .pl h3 { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px; font-weight: 500; color: var(--text); }
 .pl p { font-size: 0.95rem; color: var(--text-light); line-height: 1.8; }
 
-/* Atmosfäär ja Galerii efekt */
 .atm { background: var(--bg-alt); padding: 120px 0; }
 .ag { display: grid; gap: 60px; }
 @media(min-width: 768px) { .ag { grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; } }
 
-/* UUS: Kunstiteose raam */
 .art-wrapper { position: relative; width: 100%; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px rgba(44, 42, 40, 0.08); border: 1px solid var(--border); }
 .art-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; transition: transform 1.5s ease; }
 .art-wrapper:hover img { transform: scale(1.02); }
@@ -93,7 +87,6 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 @media(min-width: 768px) { .vc blockquote { font-size: 2.2rem; } }
 .va { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); }
 
-/* Pakkumised */
 .oh { text-align: center; margin-bottom: 80px; }
 .cd { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 32px 0; border-bottom: 1px solid var(--border); align-items: center; }
 .cd:first-child { border-top: 1px solid var(--border); }
@@ -105,7 +98,6 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .cb { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; border: none; background: none; border-bottom: 1px solid var(--border); padding-bottom: 4px; cursor: pointer; transition: 0.3s; color: var(--text); white-space: nowrap; }
 .cb:hover { border-color: var(--text); color: var(--accent); }
 
-/* Liitumine */
 .jn { padding: 120px 0; text-align: center; background: var(--text); color: var(--bg); }
 .jn .sh, .jn .sh em { color: var(--bg); }
 .jn .tag { color: var(--text-light); }
@@ -118,7 +110,6 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .jb { background: var(--bg); color: var(--text); border: none; text-transform: uppercase; letter-spacing: 0.15em; font-size: 10px; cursor: pointer; transition: 0.3s; padding: 16px; }
 @media(min-width: 480px) { .jb { background: transparent; color: var(--bg); padding: 8px 16px; } .jb:hover { color: var(--accent); } }
 
-/* Jalus */
 footer { padding: 40px 20px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); background: var(--bg); }
 .cr { margin-top: 12px; font-size: 10px; }
 .cr a { color: var(--text); transition: 0.3s; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
@@ -201,10 +192,9 @@ footer { padding: 40px 20px; text-align: center; font-size: 11px; text-transform
 
 <section class="atm">
 <div class="w"><div class="ag">
-
 <div class="fade">
   <div class="art-wrapper">
-    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1000&q=80" alt="Leegi sisemaailm" loading="lazy">
+    <img src="leegi-hero.png" alt="Leegi Majak — where inner fire becomes visible light" loading="lazy">
   </div>
   <div class="art-caption en">The world within</div>
   <div class="art-caption et">Sisemine maailm</div>
@@ -228,10 +218,10 @@ footer { padding: 40px 20px; text-align: center; font-size: 11px; text-transform
 <p class="va en">The voice of Leegi</p>
 <p class="va et">Leegi hääl</p>
 </div>
-
 </div>
 </div></div>
 </section>
+
 <section class="sec" id="off">
 <div class="w">
 <div class="oh fade">

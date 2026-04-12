@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leegi Majak — A Lighthouse of Living Warmth</title>
-<meta name="description" content="Leegi Majak is a feminine world of joy, inspiration, beauty, and inner light — for women who want to feel more alive.">
-<meta property="og:title" content="Leegi Majak — A Lighthouse of Living Warmth">
+<title>Leegi Majak — A Lighthouse of Inner Warmth</title>
+<meta name="description" content="Leegi Majak is a feminine world of joy, beauty, inspiration, and inner light for women who want to feel more alive, warm, and connected.">
+<meta property="og:title" content="Leegi Majak — A Lighthouse of Inner Warmth">
 <meta property="og:description" content="A feminine world of joy, inspiration, beauty, and inner light.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leegimajak.com">
@@ -35,8 +35,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0
 .lt button{border:none;border-radius:999px;padding:6px 12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;cursor:pointer;background:0 0;color:var(--sand);transition:.3s}
 .lt button.on{background:#fff;color:var(--earth);box-shadow:0 2px 8px rgba(0,0,0,.08)}
 .bs{display:inline-block;border-radius:999px;padding:10px 20px;font-size:12px;font-weight:600;color:#fff;background:linear-gradient(135deg,var(--coral),var(--coral2));box-shadow:0 8px 24px rgba(232,131,90,.3);transition:transform .3s}.bs:hover{transform:translateY(-2px)}
-.hero{position:relative;min-height:100vh;min-height:100dvh;background:radial-gradient(ellipse 80% 50% at 20% 10%,rgba(255,217,120,.35),transparent),radial-gradient(ellipse 60% 40% at 85% 15%,rgba(232,131,90,.18),transparent),radial-gradient(ellipse 90% 60% at 50% 80%,rgba(255,240,220,.5),transparent),linear-gradient(175deg,#FFF8EE,#FFFAF5 35%,#FFFDF9);overflow:hidden}
-.hero .w{position:relative;z-index:2;padding-bottom:80px}
+.hero{position:relative;background:radial-gradient(ellipse 80% 50% at 20% 10%,rgba(255,217,120,.35),transparent),radial-gradient(ellipse 60% 40% at 85% 15%,rgba(232,131,90,.18),transparent),radial-gradient(ellipse 90% 60% at 50% 80%,rgba(255,240,220,.5),transparent),linear-gradient(175deg,#FFF8EE,#FFFAF5 35%,#FFFDF9);overflow:hidden;padding-bottom:60px}
+.hero .w{position:relative;z-index:2}
 .pts{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .dot{position:absolute;border-radius:50%;opacity:0}
 .hb{margin-top:48px;max-width:640px}
@@ -81,7 +81,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0
 .cd h3{font-size:1.15rem;font-weight:500;color:var(--earth2)}
 .pr{font-size:13px;font-weight:700;color:var(--coral);white-space:nowrap}
 .cd p{margin-top:10px;flex:1;font-size:13px;line-height:1.7;color:#7A5D4F}
-.cb{margin-top:16px;width:100%;border-radius:999px;padding:12px;font-size:13px;font-weight:600;border:none;cursor:pointer;transition:transform .3s}.cb:hover{transform:translateY(-2px)}
+.cb{display:block;text-align:center;margin-top:16px;width:100%;border-radius:999px;padding:12px;font-size:13px;font-weight:600;border:none;cursor:pointer;transition:transform .3s}.cb:hover{transform:translateY(-2px)}
 .cb.p1{background:linear-gradient(135deg,var(--coral),var(--coral2));color:#fff;box-shadow:0 10px 24px rgba(232,131,90,.25)}
 .cb.s1{background:rgba(255,255,255,.9);color:#7D5948;border:1px solid #FFD7B6}
 .jn{padding:80px 0;background:linear-gradient(180deg,var(--cream),#FFF3E2,var(--cream));position:relative;overflow:hidden}
@@ -97,6 +97,21 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0
 footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-top:1px solid #FFE4CF}
 .cr{margin-top:12px;font-size:11px;color:#BFA08D}
 .cr a{color:var(--gold);font-weight:600;transition:color .3s}.cr a:hover{color:var(--coral)}
+h1,h2{word-break:break-word;overflow-wrap:anywhere}
+h1 em,.sh em{word-break:break-word;overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto;margin-top:4px}
+@media(max-width:480px){
+.hero h1{font-size:2.1rem;line-height:1.18;padding-bottom:8px}
+.sh{font-size:1.7rem;line-height:1.2}
+.w{padding-left:24px;padding-right:24px}
+.hp,.pt p{font-size:.95rem;line-height:1.85}
+.hbtns{gap:10px}
+.bb,.bg{padding:14px 24px;font-size:13px}
+.pl{padding:22px}
+.pl h3{font-size:1.4rem}
+.cd{padding:20px}
+.vc blockquote{font-size:1.2rem}
+}
+.pt p{margin-bottom:24px}
 </style>
 </head>
 <body>
@@ -112,8 +127,8 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 <a href="#off" class="en">Offerings</a><a href="#off" class="et">Pakkumised</a>
 </div>
 <div class="lt" role="group" aria-label="Language">
-<button class="on" onclick="sl('en')" aria-label="English">EN</button>
-<button onclick="sl('et')" aria-label="Eesti">ET</button>
+<button type="button" class="on" onclick="sl('en')" aria-label="English">EN</button>
+<button type="button" onclick="sl('et')" aria-label="Eesti">ET</button>
 </div>
 <a href="#jn" class="bs en">Join the Circle</a>
 <a href="#jn" class="bs et">Liitu ringiga</a>
@@ -121,17 +136,17 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 </nav>
 
 <div class="hb fade in">
-<span class="tag en">A lighthouse of living warmth</span>
-<span class="tag et">Elava soojuse majakas</span>
+<span class="tag en">A lighthouse of inner warmth</span>
+<span class="tag et">Sisemise soojuse majakas</span>
 <h1 class="en">Where inner fire<em>becomes visible light.</em></h1>
 <h1 class="et">Kus sisemine tuli<em>saab nähtavaks valguseks.</em></h1>
-<p class="hp en">Leegi Majak is a feminine world of joy, inspiration, beauty, and inner light — for women who want to feel more alive without pressure, noise, or performance.</p>
-<p class="hp et">Leegi Majak on helge ja elus naiselik maailm — inspiratsioon, ilu, rõõm ja sisemine valgus neile, kes tahavad jälle elust rõõmu tunda ilma surve ja müraga.</p>
+<p class="hp en">Leegi Majak is a feminine world of joy, inspiration, beauty, and inner light — for women who want to feel more alive without pressure, noise, or the need to perform.</p>
+<p class="hp et">Leegi Majak on helge ja elav naiselik maailm — inspiratsioon, ilu, rõõm ja sisemine valgus neile, kes tahavad tunda end jälle elusana, ilma surve ja mürata.</p>
 <div class="hbtns">
 <a href="#jn" class="bb en">Enter the Lighthouse <span>→</span></a>
-<a href="#jn" class="bb et">Astu Majakasse <span>→</span></a>
-<a href="#phil" class="bg en">Read our story</a>
-<a href="#phil" class="bg et">Loe meie lugu</a>
+<a href="#jn" class="bb et">Tule sisse <span>→</span></a>
+<a href="#phil" class="bg en">The story behind the name</a>
+<a href="#phil" class="bg et">Nime lugu</a>
 </div>
 <div class="pills en"><span class="pill">living warmth</span><span class="pill">natural joy</span><span class="pill">inner radiance</span><span class="pill">gentle guidance</span></div>
 <div class="pills et"><span class="pill">päris soojus</span><span class="pill">looduslik rõõm</span><span class="pill">sisemine sära</span><span class="pill">elujaatav kohalolu</span></div>
@@ -144,12 +159,12 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 <div class="fade">
 <span class="st en">Name philosophy</span><span class="st et">Nime filosoofia</span>
 <h2 class="sh en">Leegi is the flame.<em>Majak is the lighthouse.</em></h2>
-<h2 class="sh et">Leegi on see, mis põleb.<em>Majak on see, mis paistab.</em></h2>
+<h2 class="sh et">Leegi on tuli, mis põleb.<em>Majak on valgus, mis paistab.</em></h2>
 </div>
 <div class="pt fade">
 <p class="en">A flame is intimate, responsive, alive. It speaks to the inner spark that may have dimmed but has not disappeared. A lighthouse does not chase or shout — it stands, shines, and helps others see.</p>
 <p class="en">Together they form something rare: living light that helps people find their way again. Not through pressure. Through warmth.</p>
-<p class="et">Leek on intiimne, elav, vastutulelik. Ta räägib sellest sisemisest sädemest, mis võib olla tuhmunud, aga pole kustunud. Majakas ei taga ega karju — ta seisab, paistab ja aitab teistel näha.</p>
+<p class="et">Leek on intiimne, elav, vastutulelik. Ta räägib sellest sisemisest sädemest, mis võib olla tuhmunud, aga pole kustunud. Majakas ei sunni ega hüüa — ta seisab, paistab ja aitab teistel näha.</p>
 <p class="et">Koos moodustavad nad midagi haruldast: elusa valguse, mis aitab inimestel jälle teed leida. Mitte surve kaudu. Soojuse kaudu.</p>
 </div>
 </div></div>
@@ -164,7 +179,7 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 </div>
 <div class="pls et" id="pl-et">
 <div class="pl fade"><span class="pn">01</span><h3>Inspiratsioon</h3><p>Sõnad, vaated ja hetked, mis tõstavad pilgu üles ja toovad päeva tagasi soojust.</p></div>
-<div class="pl ft fade"><span class="pn">02</span><h3>Positiivsus</h3><p>Mitte võlts helendus, vaid päris elujaatav energia, mis ei tee sind väiksemaks, vaid avab.</p></div>
+<div class="pl ft fade"><span class="pn">02</span><h3>Helgus</h3><p>Mitte võlts helendus, vaid päris elujaatav energia, mis ei tee sind väiksemaks, vaid avab.</p></div>
 <div class="pl fade"><span class="pn">03</span><h3>Elurõõm</h3><p>Päike, loodus, naer, vabadus, pehmus, mängulisus ja ehe tunne, et elu on veel elus.</p></div>
 </div>
 </div>
@@ -179,7 +194,7 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 <div style="margin-top:28px">
 <p class="en">Inside the Lighthouse live inspiring stories, life-affirming reflections, natural beauty, gentle feminine radiance, and the kind of energy that doesn't push — it opens the heart.</p>
 <p class="en">You don't need to perform anything here. You can be real, joyful, tired, hopeful, or still on your way. The Lighthouse doesn't force. It simply shines.</p>
-<p class="et">Leegi Majakas elavad inspireerivad lood, elujaatavad mõtted, looduse ilu, pehme naiselik sära ja selline energia, mis ei suru, vaid avab südant.</p>
+<p class="et">Leegi Majakis kohtuvad inspireerivad lood, elujaatavad mõtted, looduse ilu, õrn naiselik sära ja selline energia, mis ei suru, vaid avab südant.</p>
 <p class="et">Siin ei pea midagi etendama. Võib olla päris, rõõmus, väsinud, lootusrikas või alles teel. Majakas ei sunni. Ta lihtsalt paistab.</p>
 </div>
 </div>
@@ -203,20 +218,20 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 <h2 class="sh et" style="text-align:center">Majaka kingitused</h2>
 </div>
 <div class="og en" id="og-en">
-<div class="cd fade"><div class="ct"><h3>The Lighthouse Letter</h3><span class="pr">Free</span></div><p>A weekly signal of warmth: luminous micro-essays, visual notes, seasonal reflections. No noise. Just light.</p><button class="cb s1">Subscribe free</button></div>
-<div class="cd ft fade"><div class="bdg">Most Popular</div><div class="ct"><h3>The Inner Flame Circle</h3><span class="pr">$9/month</span></div><p>Deeper letters, seasonal ritual guides, curated visual collections, and a private space of warmth.</p><button class="cb p1">Join the Circle</button></div>
-<div class="cd fade"><div class="ct"><h3>Seasonal Reflection Journal</h3><span class="pr">$12</span></div><p>A beautifully designed PDF journal for each season. Prompts for presence, gratitude, and inner light.</p><button class="cb s1">Get the Journal</button></div>
-<div class="cd fade"><div class="ct"><h3>The Warmth Deck</h3><span class="pr">$18</span></div><p>40 luminous inspiration cards. Each one a small flame. For mornings, difficult days, or quiet moments.</p><button class="cb s1">Get the Deck</button></div>
-<div class="cd fade"><div class="ct"><h3>30-Day Luminous Reset</h3><span class="pr">$29</span></div><p>A month-long guided journey back to aliveness. Daily micro-rituals, reflections, and audio warmth.</p><button class="cb s1">Begin the Reset</button></div>
-<div class="cd fade"><div class="ct"><h3>Personal Flame Reading</h3><span class="pr">$79</span></div><p>A written personal reflection based on your life story. Intimate, poetic, deeply personal.</p><button class="cb s1">Request a Reading</button></div>
+<div class="cd fade"><div class="ct"><h3>The Lighthouse Letter</h3><span class="pr">Free</span></div><p>A weekly signal of warmth: luminous micro-essays, visual notes, seasonal reflections. No noise. Just light.</p><a href="#jn" class="cb s1">Subscribe free</a></div>
+<div class="cd ft fade"><div class="bdg">Most Popular</div><div class="ct"><h3>The Inner Flame Circle</h3><span class="pr">$9/month</span></div><p>Deeper letters, seasonal ritual guides, curated visual collections, and a private space of warmth.</p><a href="#jn" class="cb p1">Join the Circle</a></div>
+<div class="cd fade"><div class="ct"><h3>Seasonal Reflection Journal</h3><span class="pr">$12</span></div><p>A beautifully designed PDF journal for each season. Prompts for presence, gratitude, and inner light.</p><a href="#jn" class="cb s1">Get the Journal</a></div>
+<div class="cd fade"><div class="ct"><h3>The Warmth Deck</h3><span class="pr">$18</span></div><p>40 luminous inspiration cards. Each one a small flame. For mornings, difficult days, or quiet moments.</p><a href="#jn" class="cb s1">Get the Deck</a></div>
+<div class="cd fade"><div class="ct"><h3>30-Day Luminous Reset</h3><span class="pr">$29</span></div><p>A month-long guided journey back to aliveness. Daily micro-rituals, reflections, and audio warmth.</p><a href="#jn" class="cb s1">Begin the Reset</a></div>
+<div class="cd fade"><div class="ct"><h3>Personal Flame Reading</h3><span class="pr">$79</span></div><p>A written personal reflection based on your life story. Intimate, poetic, deeply personal.</p><a href="#jn" class="cb s1">Request a Reading</a></div>
 </div>
 <div class="og et" id="og-et">
-<div class="cd fade"><div class="ct"><h3>Majaka Kiri</h3><span class="pr">Tasuta</span></div><p>Iganädalane soojusesignaal: helged lühiesseed, visuaalsed noodid, hooajalised mõtisklused.</p><button class="cb s1">Liitu tasuta</button></div>
-<div class="cd ft fade"><div class="bdg">Populaarseim</div><div class="ct"><h3>Sisemise Leegi Ring</h3><span class="pr">$9/kuu</span></div><p>Sügavamad kirjad, hooajalised rituaalijuhised, kureeritud visuaalsed kollektsioonid ja privaatne soojusruum.</p><button class="cb p1">Liitu ringiga</button></div>
-<div class="cd fade"><div class="ct"><h3>Hooajaline päevik</h3><span class="pr">$12</span></div><p>Kaunilt kujundatud PDF-päevik igaks hooajaks.</p><button class="cb s1">Hangi päevik</button></div>
-<div class="cd fade"><div class="ct"><h3>Soojusekaardid</h3><span class="pr">$18</span></div><p>40 helget inspiratsioonikarti. Iga kaart on väike leek.</p><button class="cb s1">Hangi kaardid</button></div>
-<div class="cd fade"><div class="ct"><h3>30-päevane taastumine</h3><span class="pr">$29</span></div><p>Kuupikkune juhitud teekond tagasi elavuse juurde.</p><button class="cb s1">Alusta teekonda</button></div>
-<div class="cd fade"><div class="ct"><h3>Isiklik leegi lugemine</h3><span class="pr">$79</span></div><p>Kirjalik isiklik mõtisklus sinu eluloo põhjal.</p><button class="cb s1">Telli lugemine</button></div>
+<div class="cd fade"><div class="ct"><h3>Majaka kiri</h3><span class="pr">Tasuta</span></div><p>Iganädalane soojusesignaal: helged lühiesseed, visuaalsed noodid, hooajalised mõtisklused.</p><a href="#jn" class="cb s1">Liitu tasuta</a></div>
+<div class="cd ft fade"><div class="bdg">Populaarseim</div><div class="ct"><h3>Sisemise Leegi Ring</h3><span class="pr">$9/kuu</span></div><p>Sügavamad kirjad, hooajalised rituaalijuhised, kureeritud visuaalsed kollektsioonid ja privaatne soojusruum.</p><a href="#jn" class="cb p1">Liitu ringiga</a></div>
+<div class="cd fade"><div class="ct"><h3>Hooajaline päevik</h3><span class="pr">$12</span></div><p>Kaunilt kujundatud PDF-päevik igaks hooajaks.</p><a href="#jn" class="cb s1">Hangi päevik</a></div>
+<div class="cd fade"><div class="ct"><h3>Soojusekaardid</h3><span class="pr">$18</span></div><p>40 helget inspiratsioonikaarti. Iga kaart on väike leek.</p><a href="#jn" class="cb s1">Hangi kaardid</a></div>
+<div class="cd fade"><div class="ct"><h3>30-päevane uus häälestus</h3><span class="pr">$29</span></div><p>Kuupikkune juhitud teekond tagasi elavuse juurde.</p><a href="#jn" class="cb s1">Alusta teekonda</a></div>
+<div class="cd fade"><div class="ct"><h3>Isiklik tulelugemine</h3><span class="pr">$79</span></div><p>Kirjalik isiklik mõtisklus sinu eluloo põhjal. Intiimne, poeetiline, sügavalt isiklik.</p><a href="#jn" class="cb s1">Telli lugemine</a></div>
 </div>
 </div>
 </section>
@@ -227,10 +242,10 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 <h2 class="sh en" style="text-align:center">Come where warm light<em>helps you see the way again.</em></h2>
 <h2 class="sh et" style="text-align:center">Tule sinna,<em>kus soe valgus aitab jälle suunda näha.</em></h2>
 <p class="js en">Join the Lighthouse Letter and receive inspiring reflections, life-affirming moments, and small signals of light that bring more joy into your day.</p>
-<p class="js et">Liitu Majaka Kirjaga ja saa aeg-ajalt inspireerivaid mõtteid, elujaatavaid hetki ja väikseid valgusemärke.</p>
+<p class="js et">Liitu majaka kirjaga ja saa aeg-ajalt inspireerivaid mõtteid, elujaatavaid hetki ja väikseid valgusemärke.</p>
 <div class="jf">
 <input type="email" id="em" placeholder="Your email address" aria-label="Email">
-<button class="jb" onclick="dj()"><span class="en">Join the Letter</span><span class="et">Liitu kirjaga</span></button>
+<button type="button" class="jb" onclick="dj()"><span class="en">Join the Letter</span><span class="et">Liitu kirjaga</span></button>
 </div>
 <p class="jnt en">Sunshine. Warmth. Inspiration. No excess noise.</p>
 <p class="jnt et">Päike. Soojus. Inspiratsioon. Mitte mingit liigset müra.</p>
@@ -238,7 +253,7 @@ footer{padding:32px 20px;text-align:center;font-size:13px;color:#9B735F;border-t
 </section>
 
 <footer>
-<div class="en">Leegi Majak © 2026 · warm light that helps you see the way again</div>
+<div class="en">Leegi Majak © 2026 · A warm light that helps you see the way again</div>
 <div class="et">Leegi Majak © 2026 · soe valgus, mis aitab jälle teed näha</div>
 <div class="cr"><span class="en">Built by</span><span class="et">Loodud</span> <a href="https://stardi.me" target="_blank" rel="noopener">stardi.me</a></div>
 </footer>

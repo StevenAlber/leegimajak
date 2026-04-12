@@ -253,6 +253,8 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.15; color: var(--earth-deep);
 }
 .section-h2 span { display: block; font-style: italic; }
+.section-h2 em { font-style: italic; }
+h1 em { font-weight: 400; font-style: italic; color: var(--earth); }
 @media (min-width: 768px) { .section-h2 { font-size: 2.8rem; } }
 
 .philosophy-text { display: flex; flex-direction: column; gap: 24px; }
@@ -419,7 +421,11 @@ a { text-decoration: none; color: inherit; }
 .footer-credit a:hover { color: var(--coral); }
 
 /* ─── LANGUAGE ─── */
+[data-lang="et"] { display: none !important; }
 .lang-hide { display: none !important; }
+.lang-show { display: inline !important; }
+.lang-show-block { display: block !important; }
+.lang-show-flex { display: flex !important; }
 </style>
 </head>
 <body>
@@ -456,8 +462,8 @@ a { text-decoration: none; color: inherit; }
           <span data-lang="et">Elava soojuse majakas</span>
         </p>
         <h1 class="animate visible animate-d2">
-          <span data-lang="en">Where inner fire<span> becomes visible light.</span></span>
-          <span data-lang="et">Kus sisemine tuli<span> saab nähtavaks valguseks.</span></span>
+          <span data-lang="en">Where inner fire<br><em>becomes visible light.</em></span>
+          <span data-lang="et">Kus sisemine tuli<br><em>saab nähtavaks valguseks.</em></span>
         </h1>
         <p class="hero-sub animate visible animate-d3">
           <span data-lang="en">Leegi Majak is a feminine world of joy, inspiration, beauty, and inner light — for women who want to feel more alive without pressure, noise, or performance.</span>
@@ -532,8 +538,8 @@ a { text-decoration: none; color: inherit; }
           <span data-lang="et">Nime filosoofia</span>
         </p>
         <h2 class="section-h2">
-          <span data-lang="en">Leegi is the flame.<span> Majak is the lighthouse.</span></span>
-          <span data-lang="et">Leegi on see, mis põleb.<span> Majak on see, mis paistab.</span></span>
+          <span data-lang="en">Leegi is the flame.<br><em>Majak is the lighthouse.</em></span>
+          <span data-lang="et">Leegi on see, mis põleb.<br><em>Majak on see, mis paistab.</em></span>
         </h2>
       </div>
       <div class="philosophy-text animate">
@@ -596,8 +602,8 @@ a { text-decoration: none; color: inherit; }
           <span data-lang="et">Mis siin elab</span>
         </p>
         <h2 class="section-h2">
-          <span data-lang="en">This is not another teaching.<span> This is an atmosphere you want to return to.</span></span>
-          <span data-lang="et">See ei ole järjekordne õpetus.<span> See on atmosfäär, kuhu tahad tagasi tulla.</span></span>
+          <span data-lang="en">This is not another teaching.<br><em>This is an atmosphere you want to return to.</em></span>
+          <span data-lang="et">See ei ole järjekordne õpetus.<br><em>See on atmosfäär, kuhu tahad tagasi tulla.</em></span>
         </h2>
         <div class="atmosphere-text" style="margin-top:32px;">
           <p data-lang="en">Inside the Lighthouse live inspiring stories, life-affirming reflections, natural beauty, gentle feminine radiance, and the kind of energy that doesn't push — it opens the heart.</p>
@@ -716,8 +722,8 @@ a { text-decoration: none; color: inherit; }
         <span data-lang="et">Liitu</span>
       </p>
       <h2 class="section-h2" style="text-align:center;">
-        <span data-lang="en">Come where warm light<span> helps you see the way again.</span></span>
-        <span data-lang="et">Tule sinna,<span> kus soe valgus aitab jälle suunda näha.</span></span>
+        <span data-lang="en">Come where warm light<br><em>helps you see the way again.</em></span>
+        <span data-lang="et">Tule sinna,<br><em>kus soe valgus aitab jälle suunda näha.</em></span>
       </h2>
       <p class="join-sub">
         <span data-lang="en">Join the Lighthouse Letter and receive inspiring reflections, life-affirming moments, images, and small signals of light that bring more joy into your day.</span>
@@ -752,22 +758,35 @@ a { text-decoration: none; color: inherit; }
 <script>
 // ─── Language Switching ───
 function setLang(lang) {
-  // Hide all elements of opposite language, show current
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    if (el.getAttribute('data-lang') === lang) {
-      el.classList.remove('lang-hide');
+  var all = document.querySelectorAll('[data-lang]');
+  for (var i = 0; i < all.length; i++) {
+    var el = all[i];
+    var elLang = el.getAttribute('data-lang');
+    // Remove all lang classes first
+    el.classList.remove('lang-hide', 'lang-show', 'lang-show-block', 'lang-show-flex');
+    if (elLang === lang) {
+      // Show this element — determine correct display type
+      var tag = el.tagName.toLowerCase();
+      var parent = el.parentElement ? el.parentElement.tagName.toLowerCase() : '';
+      if (tag === 'div' && (el.classList.contains('offer-card') || el.classList.contains('pillar') || el.classList.contains('hero-pills'))) {
+        el.classList.add('lang-show-flex');
+      } else if (tag === 'div' || tag === 'p') {
+        el.classList.add('lang-show-block');
+      } else {
+        el.classList.add('lang-show');
+      }
     } else {
       el.classList.add('lang-hide');
     }
-  });
+  }
   // Update toggle buttons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
-  });
+  var btns = document.querySelectorAll('.lang-btn');
+  for (var j = 0; j < btns.length; j++) {
+    btns[j].classList.toggle('active', btns[j].textContent.trim() === lang.toUpperCase());
+  }
   // Update placeholder
   var input = document.getElementById('joinEmail');
   if (input) input.placeholder = lang === 'en' ? 'Your email address' : 'Sinu e-posti aadress';
-  // Update html lang
   document.documentElement.lang = lang;
 }
 

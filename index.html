@@ -408,22 +408,18 @@ a { text-decoration: none; color: inherit; }
   font-size: 14px; color: #9B735F;
   border-top: 1px solid #FFE4CF;
 }
+.footer-credit {
+  margin-top: 16px; font-size: 12px; color: #BFA08D;
+  letter-spacing: 0.04em;
+}
+.footer-credit a {
+  color: var(--gold); font-weight: 600;
+  text-decoration: none; transition: color 0.3s;
+}
+.footer-credit a:hover { color: var(--coral); }
 
-/* ─── HIDDEN ─── */
-[data-lang="et"] { display: none; }
-body.lang-et [data-lang="en"] { display: none; }
-body.lang-et [data-lang="et"] { display: block; }
-body.lang-et .hero-grid [data-lang="et"],
-body.lang-et .pillars-grid [data-lang="et"],
-body.lang-et .offerings-grid [data-lang="et"] { display: flex; }
-body.lang-et .hero-grid [data-lang="en"],
-body.lang-et .pillars-grid [data-lang="en"],
-body.lang-et .offerings-grid [data-lang="en"] { display: none; }
-body.lang-et span[data-lang="et"],
-body.lang-et a[data-lang="et"] { display: inline; }
-body.lang-et span[data-lang="en"],
-body.lang-et a[data-lang="en"] { display: none; }
-span[data-lang="et"], a[data-lang="et"] { display: none; }
+/* ─── LANGUAGE ─── */
+.lang-hide { display: none !important; }
 </style>
 </head>
 <body>
@@ -746,18 +742,33 @@ span[data-lang="et"], a[data-lang="et"] { display: none; }
 <footer class="footer">
   <span data-lang="en">Leegi Majak © 2026 · warm light that helps you see the way again</span>
   <span data-lang="et">Leegi Majak © 2026 · soe valgus, mis aitab jälle teed näha</span>
+  <div class="footer-credit">
+    <span data-lang="en">Built by</span>
+    <span data-lang="et">Loodud</span>
+    <a href="https://stardi.me" target="_blank" rel="noopener">stardi.me</a>
+  </div>
 </footer>
 
 <script>
 // ─── Language Switching ───
 function setLang(lang) {
-  document.body.classList.toggle('lang-et', lang === 'et');
+  // Hide all elements of opposite language, show current
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    if (el.getAttribute('data-lang') === lang) {
+      el.classList.remove('lang-hide');
+    } else {
+      el.classList.add('lang-hide');
+    }
+  });
+  // Update toggle buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
   });
   // Update placeholder
-  const input = document.getElementById('joinEmail');
-  input.placeholder = lang === 'en' ? 'Your email address' : 'Sinu e-posti aadress';
+  var input = document.getElementById('joinEmail');
+  if (input) input.placeholder = lang === 'en' ? 'Your email address' : 'Sinu e-posti aadress';
+  // Update html lang
+  document.documentElement.lang = lang;
 }
 
 // ─── Particles ───

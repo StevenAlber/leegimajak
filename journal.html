@@ -164,21 +164,21 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </section>
 
 <div class="cats">
-<span class="cat active en">All</span>
-<span class="cat en">Inner world</span>
-<span class="cat en">Nourishment</span>
-<span class="cat en">Journey</span>
-<span class="cat en">Nature</span>
-<span class="cat active et">Kõik</span>
-<span class="cat et">Sisemaailm</span>
-<span class="cat et">Toidulaud</span>
-<span class="cat et">Teekond</span>
-<span class="cat et">Loodus</span>
+<span class="cat active en" data-filter="all">All</span>
+<span class="cat en" data-filter="inner">Inner world</span>
+<span class="cat en" data-filter="nourishment">Nourishment</span>
+<span class="cat en" data-filter="journey">Journey</span>
+<span class="cat en" data-filter="nature">Nature</span>
+<span class="cat active et" data-filter="all">Kõik</span>
+<span class="cat et" data-filter="inner">Sisemaailm</span>
+<span class="cat et" data-filter="nourishment">Toidulaud</span>
+<span class="cat et" data-filter="journey">Teekond</span>
+<span class="cat et" data-filter="nature">Loodus</span>
 </div>
 
 <section class="entries">
 
-<article class="entry fade">
+<article class="entry fade" data-cat="nature">
 <div class="entry-img"><img src="journal-1.jpg" alt="She didn't flinch" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Nature</span><span class="entry-cat et">Loodus</span><span class="entry-date">April 2026</span></div>
 <div class="entry-text">
@@ -189,7 +189,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="journey">
 <div class="entry-img"><img src="journal-2.jpg" alt="The sea remembers your name" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Journey</span><span class="entry-cat et">Teekond</span><span class="entry-date">March 2026</span></div>
 <div class="entry-text">
@@ -200,7 +200,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="journey">
 <div class="entry-img"><img src="journal-5.jpg" alt="Wings you already have" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Journey</span><span class="entry-cat et">Teekond</span><span class="entry-date">January 2026</span></div>
 <div class="entry-text">
@@ -211,7 +211,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="nature">
 <div class="entry-img"><img src="journal-6.jpg" alt="Colour without permission" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Nature</span><span class="entry-cat et">Loodus</span><span class="entry-date">January 2026</span></div>
 <div class="entry-text">
@@ -222,7 +222,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="nourishment">
 <div class="entry-img"><img src="journal-7.jpg" alt="Alive on the plate" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Nourishment</span><span class="entry-cat et">Toidulaud</span><span class="entry-date">December 2025</span></div>
 <div class="entry-text">
@@ -233,7 +233,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="journey">
 <div class="entry-img"><img src="journal-10.jpg" alt="Above the world in white" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Journey</span><span class="entry-cat et">Teekond</span><span class="entry-date">January 2026</span></div>
 <div class="entry-text">
@@ -244,7 +244,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="nature">
 <div class="entry-img"><img src="journal-11.jpg" alt="What red knows" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Nature</span><span class="entry-cat et">Loodus</span><span class="entry-date">December 2025</span></div>
 <div class="entry-text">
@@ -255,7 +255,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="nourishment">
 <div class="entry-img"><img src="journal-12.jpg" alt="The quiet ceremony" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Nourishment</span><span class="entry-cat et">Toidulaud</span><span class="entry-date">November 2025</span></div>
 <div class="entry-text">
@@ -266,7 +266,7 @@ footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:upperca
 </div>
 </article>
 
-<article class="entry fade">
+<article class="entry fade" data-cat="inner">
 <div class="entry-img"><img src="journal-9.jpg" alt="Dressed in a garden" loading="lazy"></div>
 <div class="entry-meta"><span class="entry-cat en">Inner world</span><span class="entry-cat et">Sisemaailm</span><span class="entry-date">November 2025</span></div>
 <div class="entry-text">
@@ -301,6 +301,25 @@ var f=document.querySelectorAll('.fade'),o=new IntersectionObserver(function(e){
 for(var i=0;i<f.length;i++)o.observe(f[i]);
 var params=new URLSearchParams(window.location.search);
 sl(params.get('lang')||'en');
+
+// Category filter
+document.querySelectorAll('.cat').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var filter=this.getAttribute('data-filter');
+    // Update active state for current language cats only
+    document.querySelectorAll('.cat').forEach(function(c){c.classList.remove('active')});
+    document.querySelectorAll('.cat[data-filter="'+filter+'"]').forEach(function(c){c.classList.add('active')});
+    // Filter entries
+    document.querySelectorAll('.entry').forEach(function(entry){
+      if(filter==='all'||entry.getAttribute('data-cat')===filter){
+        entry.style.display='';
+        entry.classList.add('in');
+      }else{
+        entry.style.display='none';
+      }
+    });
+  });
+});
 </script>
 </body>
 </html>

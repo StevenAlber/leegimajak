@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flame Journal — Leegi Majak</title>
+<meta name="description" content="Moments of aliveness, warmth, and inner light — a visual diary from Leegi Majak.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%2275%22 font-family=%22Georgia, serif%22 font-size=%2280%22 font-style=%22italic%22 fill=%22%23B65C43%22 text-anchor=%22middle%22>L</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+::selection{background:#EADED7;color:#2C2A28}
+:root{--bg:#FDFCF9;--bg-alt:#F4F1EB;--text:#2C2A28;--text-light:#767069;--accent:#B65C43;--border:#E6E2DA}
+body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.7;font-weight:300}
+h1,h2,h3,blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;line-height:1.15;color:var(--text)}
+a{text-decoration:none;color:inherit;transition:.3s}
+img{max-width:100%;display:block}
+.w{max-width:960px;margin:0 auto;padding:0 24px}
+@media(min-width:768px){.w{padding:0 40px}}
+.et{display:none!important}.lang-on{display:revert!important}.lang-off{display:none!important}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:translateY(0)}
+
+/* Nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:40px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;letter-spacing:.05em;color:var(--accent)}
+.nr{display:flex;align-items:center;gap:32px}
+.nl{display:none;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:var(--text-light)}
+.nl a:hover{color:var(--text)}
+@media(min-width:768px){.nl{display:flex}}
+.lt{display:flex;gap:16px;font-size:11px;letter-spacing:.1em}
+.lt button{border:none;background:none;font-size:11px;cursor:pointer;color:var(--text-light);transition:.3s;padding-bottom:2px;text-transform:uppercase}
+.lt button.on{color:var(--text);border-bottom:1px solid var(--text)}
+
+/* Header */
+.journal-head{padding:60px 0;border-bottom:1px solid var(--border);text-align:center}
+.tag{font-size:11px;text-transform:uppercase;letter-spacing:.25em;color:var(--text-light);display:block;margin-bottom:24px}
+.journal-head h1{font-size:2.6rem;margin-bottom:16px}
+.journal-head h1 em{display:block;font-style:italic;color:var(--accent);margin-top:8px}
+@media(min-width:768px){.journal-head h1{font-size:3.6rem}}
+.journal-intro{font-size:1.05rem;color:var(--text-light);max-width:520px;margin:20px auto 0;line-height:1.8}
+
+/* Categories */
+.cats{display:flex;justify-content:center;gap:24px;padding:32px 0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.cat{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--text-light);cursor:pointer;padding-bottom:2px;transition:.3s;border-bottom:1px solid transparent}
+.cat:hover,.cat.active{color:var(--text);border-bottom-color:var(--text)}
+
+/* Journal entries */
+.entries{padding:60px 0}
+
+.entry{margin-bottom:80px}
+.entry:last-child{margin-bottom:0}
+
+.entry-img{
+  width:100%;
+  border-radius:4px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 20px 40px rgba(44,42,40,.06);
+}
+.entry-img img{
+  width:100%;
+  height:auto;
+  display:block;
+  transition:transform 1.5s ease;
+}
+.entry-img:hover img{transform:scale(1.015)}
+
+.entry-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin-top:20px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+}
+.entry-cat{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:var(--accent);
+}
+.entry-date{
+  font-size:11px;
+  color:var(--text-light);
+  letter-spacing:.05em;
+}
+
+.entry-text{
+  margin-top:20px;
+  max-width:640px;
+}
+.entry-text h2{
+  font-size:1.8rem;
+  margin-bottom:16px;
+  font-weight:300;
+}
+@media(min-width:768px){.entry-text h2{font-size:2.2rem}}
+.entry-text p{
+  font-size:1.05rem;
+  color:var(--text-light);
+  line-height:1.9;
+  margin-bottom:16px;
+}
+.entry-text p:last-child{margin-bottom:0}
+
+/* CTA at bottom */
+.journal-cta{
+  text-align:center;
+  padding:80px 0;
+  border-top:1px solid var(--border);
+}
+.journal-cta p{
+  font-size:1rem;
+  color:var(--text-light);
+  margin-bottom:24px;
+  max-width:440px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.8;
+}
+.btn-outline{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 36px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;
+  background:transparent;color:var(--text);border:1px solid var(--border);
+  transition:.4s;cursor:pointer;border-radius:0;
+}
+.btn-outline:hover{border-color:var(--text)}
+
+footer{padding:40px 20px;text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);border-top:1px solid var(--border)}
+.cr{margin-top:12px;font-size:10px}
+.cr a{color:var(--text);border-bottom:1px solid var(--border);padding-bottom:2px}
+.cr a:hover{border-color:var(--text)}
+</style>
+</head>
+<body>
+
+<div class="w">
+<nav role="navigation">
+<a href="/" class="logo">Leegi Majak</a>
+<div class="nr">
+<div class="nl">
+<a href="/" class="en">Home</a><a href="/" class="et">Avaleht</a>
+<a href="/#off" class="en">Offerings</a><a href="/#off" class="et">Pakkumised</a>
+</div>
+<div class="lt" role="group" aria-label="Language">
+<button type="button" class="on" onclick="sl('en')" aria-label="English">EN</button>
+<button type="button" onclick="sl('et')" aria-label="Eesti">ET</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="w">
+<section class="journal-head fade">
+<span class="tag en">Visual diary</span>
+<span class="tag et">Visuaalne päevik</span>
+<h1 class="en">Flame Journal<em>Moments of aliveness</em></h1>
+<h1 class="et">Leegi Päevik<em>Elavuse hetked</em></h1>
+<p class="journal-intro en">Life is not lived in chapters — it is lived in moments. Small, luminous, often unnoticed. This is where those moments are held.</p>
+<p class="journal-intro et">Elu ei elata peatükkides — seda elatakse hetkedes. Väikestes, helkivates, tihti märkamatutes. Siin neid hetki hoitakse.</p>
+</section>
+
+<div class="cats">
+<span class="cat active en">All</span>
+<span class="cat en">Inner world</span>
+<span class="cat en">Nourishment</span>
+<span class="cat en">Journey</span>
+<span class="cat en">Nature</span>
+<span class="cat active et">Kõik</span>
+<span class="cat et">Sisemaailm</span>
+<span class="cat et">Toidulaud</span>
+<span class="cat et">Teekond</span>
+<span class="cat et">Loodus</span>
+</div>
+
+<section class="entries">
+
+<!-- ═══ ENTRY 1 ═══ -->
+<article class="entry fade">
+<div class="entry-img">
+<img src="journal-1.jpg" alt="Meeting life without flinching" loading="lazy">
+</div>
+<div class="entry-meta">
+<span class="entry-cat en">Nature</span>
+<span class="entry-cat et">Loodus</span>
+<span class="entry-date">April 2026</span>
+</div>
+<div class="entry-text">
+<h2 class="en">She didn't flinch</h2>
+<h2 class="et">Ta ei värisenud</h2>
+<p class="en">There are creatures the world tells us to fear. And then there are moments when you hold one in your hands and realise — the fear was never about the creature. It was about what you thought you couldn't hold.</p>
+<p class="en">Sometimes the bravest thing is to smile at what once made you tremble.</p>
+<p class="et">On olendeid, keda maailm käsib karta. Ja siis on hetki, kui hoiad ühte käes ja mõistad — hirm ei olnud kunagi selle olendi pärast. See oli selle pärast, mida sa arvasid, et ei suuda hoida.</p>
+<p class="et">Vahel on kõige julgem asi naeratada selle üle, mis sind kunagi värisema pani.</p>
+</div>
+</article>
+
+<!-- ═══ ENTRY 2 (placeholder for future) ═══ -->
+<!--
+<article class="entry fade">
+<div class="entry-img">
+<img src="journal-2.jpg" alt="" loading="lazy">
+</div>
+<div class="entry-meta">
+<span class="entry-cat en">Nourishment</span>
+<span class="entry-cat et">Toidulaud</span>
+<span class="entry-date">April 2026</span>
+</div>
+<div class="entry-text">
+<h2 class="en">Title here</h2>
+<h2 class="et">Pealkiri siin</h2>
+<p class="en">Text here.</p>
+<p class="et">Tekst siin.</p>
+</div>
+</article>
+-->
+
+</section>
+
+<section class="journal-cta">
+<p class="en">Each moment here was lived before it was shared. That is the only rule of this journal.</p>
+<p class="et">Iga hetk siin on enne jagamist ära elatud. See on selle päeviku ainus reegel.</p>
+<a href="/#jn" class="btn-outline en">Join the Lighthouse Letter</a>
+<a href="/#jn" class="btn-outline et">Liitu Majaka kirjaga</a>
+</section>
+</div>
+
+<footer>
+<div class="en">Leegi Majak © 2026</div>
+<div class="et">Leegi Majak © 2026</div>
+<div class="cr"><span class="en">Built by</span><span class="et">Loodud</span> <a href="https://stardi.me" target="_blank" rel="noopener">stardi.me</a></div>
+</footer>
+
+<script>
+var L='en';
+function sl(l){L=l;var a=document.querySelectorAll('.en'),b=document.querySelectorAll('.et'),i;if(l==='en'){for(i=0;i<a.length;i++){a[i].classList.remove('lang-off');a[i].classList.add('lang-on');}for(i=0;i<b.length;i++){b[i].classList.remove('lang-on');b[i].classList.add('lang-off');}}else{for(i=0;i<a.length;i++){a[i].classList.remove('lang-on');a[i].classList.add('lang-off');}for(i=0;i<b.length;i++){b[i].classList.remove('lang-off');b[i].classList.add('lang-on');}}document.documentElement.lang=l;
+var t=document.querySelectorAll('.lt button');for(i=0;i<t.length;i++)t[i].className=t[i].textContent.trim()===l.toUpperCase()?'on':'';}
+var f=document.querySelectorAll('.fade'),o=new IntersectionObserver(function(e){for(var i=0;i<e.length;i++)if(e[i].isIntersecting)e[i].target.classList.add('in');},{threshold:.15});
+for(var i=0;i<f.length;i++)o.observe(f[i]);
+var params=new URLSearchParams(window.location.search);
+sl(params.get('lang')||'en');
+</script>
+</body>
+</html>

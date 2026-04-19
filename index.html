@@ -164,9 +164,9 @@ nav {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 32px;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 12px;
 }
 /* On mobile, show image FIRST (before text) */
 .hero-image-wrap { order: 1; }
@@ -259,7 +259,6 @@ nav {
 .hero-image-wrap {
   position: relative;
   margin-top: 16px;
-  padding: 0 0 36px;
 }
 .hero-image {
   position: relative;
@@ -278,42 +277,47 @@ nav {
 }
 .hero-image:hover img { transform: scale(1.03); }
 
-.hero-image::before {
+/* Dark gradient strip at the bottom of the image for caption legibility */
+.hero-image::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 55%, rgba(44, 42, 40, 0.35) 100%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.55) 100%);
   z-index: 2;
   pointer-events: none;
 }
 
 .hero-caption {
   position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 44px;
+  left: 24px;
+  right: 24px;
+  bottom: 18px;
   z-index: 3;
   color: #FFF;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1rem;
   letter-spacing: 0.02em;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
   line-height: 1.4;
   text-align: center;
+  pointer-events: none;
 }
-@media(min-width: 768px) { .hero-caption { font-size: 1.15rem; bottom: 52px; } }
+@media(min-width: 768px) { .hero-caption { font-size: 1.2rem; bottom: 24px; } }
 
-/* Decorative caption below image */
+/* Small terracotta line below the image */
 .hero-orn-below {
   display: block;
   font-family: 'DM Sans', sans-serif;
   font-size: 10px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
   text-align: center;
-  margin-top: 18px;
+  margin-top: 16px;
   opacity: 0.85;
 }
 

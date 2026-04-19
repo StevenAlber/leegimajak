@@ -193,15 +193,26 @@ nav {
   letter-spacing: 0.3em;
   color: var(--accent);
   display: inline-block;
-  margin-bottom: 28px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--accent);
+  margin-bottom: 36px;
+  position: relative;
+  padding-left: 40px;
+}
+.eyebrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  transform: translateY(-50%);
 }
 .hero h1 {
   font-size: 2.6rem;
   color: var(--text);
   margin-bottom: 20px;
   letter-spacing: -0.01em;
+  margin-top: 8px;
 }
 .hero h1 em {
   display: block;

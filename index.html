@@ -83,7 +83,12 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
   .w-wide { padding: 0 40px; }
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== HEADER / NAVIGATION ===== */
+header[role="banner"] {
+  background: var(--bg);
+  position: relative;
+  z-index: 10;
+}
 nav {
   display: flex;
   align-items: center;
@@ -158,7 +163,7 @@ nav {
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  padding: 0 0 100px;
+  padding: 8px 0 100px;
   overflow: hidden;
 }
 .hero-grid {
@@ -495,26 +500,28 @@ nav {
   max-width: 780px;
   margin: 0 auto;
 }
+.malambo .sec-tag { margin-bottom: 48px; }
 .malambo blockquote {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.8rem;
   line-height: 1.45;
   color: var(--text);
-  margin-bottom: 28px;
+  margin: 0 auto 36px;
+  max-width: 720px;
+  padding: 8px 0;
   position: relative;
 }
 @media(min-width: 768px) { .malambo blockquote { font-size: 2.4rem; } }
-.malambo blockquote::before,
-.malambo blockquote::after {
+/* Single, restrained accent line above the quote */
+.malambo blockquote::before {
   content: '';
   display: block;
-  width: 40px;
+  width: 48px;
   height: 1px;
   background: var(--accent);
-  margin: 0 auto 28px;
+  margin: 0 auto 40px;
 }
-.malambo blockquote::after { margin: 28px auto 0; }
 .malambo .attrib {
   font-size: 10px;
   text-transform: uppercase;
@@ -764,10 +771,8 @@ footer .fq {
 </head>
 <body>
 
-<!-- ===== HERO ===== -->
-<section class="hero" role="banner">
+<header role="banner">
 <div class="w-wide">
-
 <nav role="navigation" aria-label="Main">
 <div class="logo"><span>Leegi</span> Majak</div>
 <div class="nr">
@@ -783,6 +788,14 @@ footer .fq {
 </div>
 </div>
 </nav>
+</div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+<div class="w-wide">
 
 <div class="hero-grid">
 
@@ -1195,6 +1208,8 @@ Mida me päriselt vajame? Mitte rohkem müra. Mitte rohkem survet. Me vajame hin
 </div>
 </div>
 </section>
+
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer>

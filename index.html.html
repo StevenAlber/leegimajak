@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leegi Majak — Süda su sees olgu juht su ees</title>
+<meta name="description" content="Leegi Majak — koht, mis tuletab meelde, kes sa päriselt oled. Sinu sisemine leek on alati olnud. Siin see tuletatakse meelde.">
+<link rel="canonical" href="https://leegimajak.com">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%2275%22 font-family=%22Georgia, serif%22 font-size=%2280%22 font-style=%22italic%22 fill=%22%23B65C43%22 text-anchor=%22middle%22>L</text></svg>">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leegimajak.com/">
+<meta property="og:title" content="Leegi Majak — Süda su sees olgu juht su ees">
+<meta property="og:description" content="Koht, mis tuletab meelde, kes sa päriselt oled. Hingetasandil, hingest hinge.">
+<meta property="og:image" content="https://leegimajak.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leegi Majak — Süda su sees olgu juht su ees">
+<meta name="twitter:description" content="Leek, mis tuletab meelde, kes sa päriselt oled.">
+<meta name="twitter:image" content="https://leegimajak.com/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+::selection { background: #EADED7; color: #2C2A28; }
+:root {
+  --bg: #FDFCF9;
+  --bg-alt: #F4F1EB;
+  --bg-warm: #F9F3EC;
+  --text: #2C2A28;
+  --text-light: #767069;
+  --accent: #B65C43;
+  --accent-soft: #D9A38E;
+  --border: #E6E2DA;
+}
+body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.75; font-weight: 300; }
+h1, h2, h3, blockquote { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; line-height: 1.15; color: var(--text); }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+.et { display: none !important; }
+.lang-on { display: revert !important; }
+.lang-off { display: none !important; }
+.fade { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
+.fade.in { opacity: 1; transform: translateY(0); }
+.w { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.w-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+@media(min-width: 768px) { .w, .w-narrow { padding: 0 40px; } }
+
+nav { display: flex; align-items: center; justify-content: space-between; padding: 40px 0; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; letter-spacing: 0.05em; color: var(--accent); }
+.nr { display: flex; align-items: center; gap: 32px; }
+.nl { display: none; gap: 24px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-light); }
+.nl a:hover { color: var(--text); }
+@media(min-width: 768px) { .nl { display: flex; } }
+.lt { display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; }
+.lt button { border: none; background: none; font-size: 11px; cursor: pointer; color: var(--text-light); transition: 0.3s; padding-bottom: 2px; text-transform: uppercase; }
+.lt button.on { color: var(--text); border-bottom: 1px solid var(--text); }
+
+.btn-solid, .btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 14px 36px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; transition: all 0.4s ease; cursor: pointer; border-radius: 0; }
+.btn-solid { background: var(--text); color: var(--bg); border: 1px solid var(--text); }
+.btn-solid:hover { background: transparent; color: var(--text); }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { border-color: var(--text); }
+
+/* HERO — portrait on the left, opening words on the right */
+.hero { padding: 40px 0 80px; }
+.hero-grid { display: grid; gap: 48px; align-items: center; margin-top: 20px; }
+@media(min-width: 900px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.hero-portrait { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 2px; box-shadow: 0 30px 60px rgba(44, 42, 40, 0.15); }
+.hero-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 2.5s ease; }
+.hero-portrait:hover img { transform: scale(1.03); }
+.hero-portrait-caption { font-size: 10px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--accent); text-align: center; margin-top: 16px; opacity: 0.9; }
+
+.hero-words .tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.28em; color: var(--accent); display: block; margin-bottom: 24px; }
+.hero-words h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 24px; font-style: italic; color: var(--text); }
+@media(min-width: 768px) { .hero-words h1 { font-size: 3.2rem; } }
+.hero-words h1 .dash { display: block; width: 40px; height: 1px; background: var(--accent); margin: 20px 0; }
+.hero-words .attrib { font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-light); margin-top: 8px; margin-bottom: 28px; }
+.hero-words p { font-size: 1.05rem; color: var(--text-light); line-height: 1.9; margin-bottom: 20px; }
+.hero-words .signoff { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; color: var(--accent); margin-top: 24px; }
+
+/* The name opens — Leegi / Majak */
+.name-open { padding: 100px 0; text-align: center; background: var(--bg-warm); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.name-open .tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.28em; color: var(--text-light); display: block; margin-bottom: 40px; }
+.name-open h2 { font-size: 2.2rem; font-style: italic; margin-bottom: 32px; line-height: 1.3; }
+@media(min-width: 768px) { .name-open h2 { font-size: 3rem; } }
+.name-open h2 .word { color: var(--accent); font-style: normal; }
+.name-open p { font-size: 1.1rem; color: var(--text-light); line-height: 1.9; max-width: 580px; margin: 0 auto; }
+
+/* Sections */
+.sec { padding: 110px 0; }
+.sec-bordered { border-top: 1px solid var(--border); }
+.sh { font-size: 2.2rem; margin-bottom: 32px; line-height: 1.2; }
+.sh em { font-style: italic; color: var(--accent); display: block; margin-top: 8px; font-size: 0.85em; }
+@media(min-width: 768px) { .sh { font-size: 3.2rem; } }
+.tag-sm { font-size: 11px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--accent); display: block; margin-bottom: 20px; }
+
+.body-text p { font-size: 1.08rem; color: var(--text-light); margin-bottom: 22px; line-height: 1.95; }
+.body-text p strong { color: var(--text); font-weight: 400; }
+.body-text p em { color: var(--text); font-style: italic; }
+
+/* Three pillars — remembrance, aliveness, everyday magic */
+.pls { display: grid; gap: 40px; padding-top: 20px; }
+@media(min-width: 768px) { .pls { grid-template-columns: repeat(3, 1fr); gap: 48px; } }
+.pl { border-top: 1px solid var(--accent); padding-top: 24px; }
+.pn { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--accent); display: block; margin-bottom: 14px; font-style: italic; }
+.pl h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; margin-bottom: 16px; font-weight: 300; line-height: 1.3; color: var(--text); }
+.pl p { font-size: 1rem; color: var(--text-light); line-height: 1.9; }
+
+/* Malambo story */
+.story { background: var(--bg-warm); padding: 110px 0; }
+.story .tag-sm { color: var(--text-light); }
+.story h2 { font-size: 2rem; margin-bottom: 32px; font-style: italic; line-height: 1.3; }
+@media(min-width: 768px) { .story h2 { font-size: 2.8rem; } }
+
+/* Heart quote — the childhood sentence (kept as sacred center) */
+.heart-quote { padding: 100px 0; text-align: center; }
+.heart-quote blockquote { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.9rem; line-height: 1.4; color: var(--text); max-width: 680px; margin: 0 auto; padding: 0 24px; position: relative; font-weight: 300; }
+.heart-quote blockquote::before { content: ''; display: block; width: 50px; height: 1px; background: var(--accent); margin: 0 auto 36px; }
+.heart-quote .attrib { font-size: 11px; text-transform: uppercase; letter-spacing: 0.28em; color: var(--accent); margin-top: 32px; }
+@media(min-width: 768px) { .heart-quote blockquote { font-size: 2.6rem; } .heart-quote { padding: 120px 0; } }
+
+/* Offerings — kept to two: Letter + Lighthouse Circle */
+.oh { text-align: center; margin-bottom: 70px; }
+.off-grid { display: grid; gap: 32px; }
+@media(min-width: 768px) { .off-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+.off-card { background: var(--bg-warm); padding: 48px 36px; border: 1px solid var(--border); display: flex; flex-direction: column; transition: all 0.4s ease; }
+.off-card:hover { border-color: var(--accent-soft); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(44, 42, 40, 0.06); }
+.off-tag { font-size: 10px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--accent); margin-bottom: 20px; }
+.off-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; margin-bottom: 20px; line-height: 1.2; font-style: italic; }
+.off-card p { font-size: 1rem; color: var(--text-light); line-height: 1.9; margin-bottom: 24px; flex-grow: 1; }
+.off-meta { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--border); margin-top: 12px; }
+.off-price { font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text); font-weight: 400; }
+.off-cta { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 3px; transition: 0.3s; }
+.off-cta:hover { color: var(--text); border-color: var(--text); }
+
+/* Journal — three paths */
+.journal-intro { text-align: center; max-width: 620px; margin: 0 auto 60px; }
+.journal-intro p { font-size: 1.08rem; color: var(--text-light); line-height: 1.9; }
+.paths { display: grid; gap: 32px; margin-bottom: 48px; }
+@media(min-width: 768px) { .paths { grid-template-columns: repeat(3, 1fr); } }
+.path { padding: 32px 28px; background: var(--bg); border: 1px solid var(--border); transition: 0.4s; }
+.path:hover { border-color: var(--accent-soft); }
+.path-num { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: var(--accent); display: block; margin-bottom: 12px; }
+.path h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; margin-bottom: 14px; line-height: 1.3; }
+.path p { font-size: 0.98rem; color: var(--text-light); line-height: 1.85; }
+.journal-cta { text-align: center; margin-top: 48px; }
+
+/* Join letter section */
+.jn { padding: 120px 0; text-align: center; background: var(--text); color: var(--bg); }
+.jn .sh, .jn .sh em { color: var(--bg); }
+.jn .sh em { color: var(--accent-soft); }
+.jn .tag-sm { color: var(--accent-soft); }
+.js { max-width: 540px; margin: 32px auto; color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.85; }
+.jf { display: flex; flex-direction: column; max-width: 460px; margin: 44px auto 0; gap: 16px; }
+@media(min-width: 480px) { .jf { flex-direction: row; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 8px; gap: 0; } }
+.jf input { flex: 1; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: var(--bg); font-size: 1rem; outline: none; font-family: 'DM Sans', sans-serif; font-weight: 300; padding: 14px; text-align: center; }
+@media(min-width: 480px) { .jf input { border: none; padding: 8px; text-align: left; } }
+.jf input::placeholder { color: rgba(255,255,255,0.4); }
+.jb { background: var(--bg); color: var(--text); border: none; text-transform: uppercase; letter-spacing: 0.2em; font-size: 10px; cursor: pointer; transition: 0.3s; padding: 16px; }
+@media(min-width: 480px) { .jb { background: transparent; color: var(--bg); padding: 8px 16px; } .jb:hover { color: var(--accent-soft); } }
+
+/* Footer */
+footer { padding: 48px 20px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-light); background: var(--bg); border-top: 1px solid var(--border); }
+footer .f-quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); text-transform: none; letter-spacing: 0.02em; margin-bottom: 16px; }
+.cr { margin-top: 14px; font-size: 10px; }
+.cr a { color: var(--text); transition: 0.3s; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+.cr a:hover { border-color: var(--text); }
+
+@media(max-width: 480px) {
+  .hero-words h1 { font-size: 2rem; }
+  .sh { font-size: 1.9rem; }
+  .name-open h2 { font-size: 1.8rem; }
+  .story h2 { font-size: 1.7rem; }
+  .heart-quote blockquote { font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="w">
+<nav role="navigation" aria-label="Main">
+<div class="logo">Leegi Majak</div>
+<div class="nr">
+<div class="nl">
+<a href="#name" class="en">The Name</a><a href="#name" class="et">Nimi</a>
+<a href="#pillars" class="en">Here you remember</a><a href="#pillars" class="et">Siin tuletatakse meelde</a>
+<a href="journal.html" class="en">Journal</a><a href="journal.html?lang=et" class="et">Päevik</a>
+<a href="#off" class="en">Letters</a><a href="#off" class="et">Kirjad</a>
+</div>
+<div class="lt" role="group" aria-label="Language">
+<button type="button" class="on" onclick="sl('en')" aria-label="English">EN</button>
+<button type="button" onclick="sl('et')" aria-label="Eesti">ET</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- HERO: portrait + opening voice -->
+<section class="hero">
+<div class="w">
+<div class="hero-grid">
+
+<div class="fade in">
+<div class="hero-portrait">
+<img src="leegi-hero.jpeg" alt="Leegi" loading="eager">
+</div>
+<p class="hero-portrait-caption en">Somewhere in Vietnam · where my flame steadied</p>
+<p class="hero-portrait-caption et">Kuskil Vietnamis · kus mu leek rahunes</p>
+</div>
+
+<div class="hero-words fade in">
+<span class="tag en">A sentence I wrote as a child</span>
+<span class="tag et">Lause, mille kirjutasin juba lapsena</span>
+
+<h1 class="en">Let the heart within<br>be the guide ahead.</h1>
+<h1 class="et">Süda su sees<br>olgu juht su ees.</h1>
+
+<div style="width:40px;height:1px;background:var(--accent);margin:8px 0 28px;"></div>
+
+<p class="en">I am Leegi. An Estonian mother of two small children, a traveller, a reader, a woman who has been listening to the world for a long time — and who has learned, slowly, that everything I was looking for out there was already quietly burning inside.</p>
+<p class="en">This place is called <em>Leegi Majak</em>. It is my way of saying: you already carry the flame. This is a lighthouse to help you see it again.</p>
+
+<p class="et">Olen Leegi. Eesti ema kahele pisikesele lapsele, rändur, raamatute armastaja — naine, kes on pikalt maailma kuulanud ja aeglaselt aru saanud, et kõik, mida ma väljast otsisin, oli juba vaikselt sees põlenud.</p>
+<p class="et">See koht kannab nime <em>Leegi Majak</em>. See on mu viis öelda: leek on sinus juba olemas. See siin on majakas, mis aitab sul teda taas näha.</p>
+
+<p class="signoff en">— with warmth, Leegi</p>
+<p class="signoff et">— soojusega, Leegi</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- THE NAME OPENS -->
+<section class="name-open" id="name">
+<div class="w-narrow fade">
+<span class="tag en">The name, opened gently</span>
+<span class="tag et">Nimi, avatud pehmelt</span>
+
+<h2 class="en"><span class="word">Leegi</span> — the flame.<br><span class="word">Majak</span> — the lighthouse.</h2>
+<h2 class="et"><span class="word">Leegi</span> — leek.<br><span class="word">Majak</span> — majakas.</h2>
+
+<p class="en">The flame is the part of you that has always been alive — even on the days you forgot. The lighthouse is what happens when that flame becomes steady enough to be seen from afar. One woman remembering herself becomes a light others can find their way by.</p>
+<p class="et">Leek on see osa sinus, mis on alati olnud elus — isegi päevadel, kui unustasid. Majakas sünnib siis, kui see leek muutub nii kindlaks, et teda on kaugelt näha. Üks naine, kes tuletab endale meelde, kes ta on, muutub valguseks, mille järgi teised tee leiavad.</p>
+</div>
+</section>
+
+<!-- PILLARS — three things this place stands on -->
+<section class="sec" id="pillars">
+<div class="w">
+
+<div style="text-align:center;max-width:640px;margin:0 auto 60px;" class="fade">
+<span class="tag-sm en">What this place stands on</span>
+<span class="tag-sm et">Millel see koht seisab</span>
+<h2 class="sh en">Three quiet truths<em>that everything here returns to</em></h2>
+<h2 class="sh et">Kolm vaikset tõde<em>mille juurde kõik siin naaseb</em></h2>
+</div>
+
+<div class="pls">
+
+<div class="pl fade">
+<span class="pn">I</span>
+<h3 class="en">You are not broken.<br>You remember.</h3>
+<h3 class="et">Sa ei ole katki.<br>Sa tuletad meelde.</h3>
+<p class="en">This place is not here to fix you. There is nothing in you that needs fixing. You came into this world whole, with a flame and a direction of your own. Life, noise, and the rules of others placed a cover over it. Here we lift the cover — slowly, without drama — and watch what was always burning.</p>
+<p class="et">See koht ei ole siin selleks, et sind parandada. Sinus ei ole midagi, mis vajab parandamist. Sa tulid siia ilma terviklikuna, oma leegi ja oma suunaga. Elu, müra ja teiste reeglid panid sellele katte peale. Siin me tõstame selle katte — aeglaselt, ilma draamata — ja vaatame, mis on alati põlenud.</p>
+</div>
+
+<div class="pl fade">
+<span class="pn">II</span>
+<h3 class="en">Your power is earthly,<br>not otherworldly.</h3>
+<h3 class="et">Sinu vägi on maine,<br>mitte ebamaine.</h3>
+<p class="en">I do not claim any channel, any higher truth, any teaching above yours. What I know is simple and human: your hands, your body, your children, the food you cook, the path you walk, the choices you make in an ordinary Tuesday morning — these are your real power. Feet on the ground, senses reaching into the sky. That balance is the whole work.</p>
+<p class="et">Ma ei kanna ühtegi kanalit, ühtegi kõrgemat tõde, ühtegi õpetust sinu omast üle. See, mida tean, on lihtne ja inimlik: sinu käed, sinu keha, sinu lapsed, toit, mille teed, tee, mida kõnnid, valikud, mida teed tavalisel teisipäeva hommikul — see on su päris vägi. Jalad maas, meeled taeva poole. See tasakaal on kogu töö.</p>
+</div>
+
+<div class="pl fade">
+<span class="pn">III</span>
+<h3 class="en">Everyday life<br>can be a fairytale.</h3>
+<h3 class="et">Igapäevaelu<br>võib olla muinasjutt.</h3>
+<p class="en">Not because the world becomes different — but because your attention does. When you notice the small magic (morning light on a wall, a child's laugh, a meal that smelled right, a sign from the universe on a street you did not plan to walk) the ordinary begins to glow. Magic is not somewhere else. It is in what you choose to see.</p>
+<p class="et">Mitte sellepärast, et maailm muutuks teistsuguseks — vaid sellepärast, et sinu tähelepanu muutub. Kui sa märkad väikest maagiat (hommikust valgust seinal, lapse naeru, toitu, mis lõhnas õigesti, universumi märki tänaval, kuhu sa ei plaaninud minna) — tavaline hakkab helkima. Maagia ei ole kusagil mujal. Ta on selles, mida sa otsustad näha.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- THE CHILDHOOD SENTENCE — sacred center -->
+<section class="heart-quote sec-bordered">
+<div class="fade">
+<blockquote class="en">Let the heart within be the guide ahead.</blockquote>
+<blockquote class="et">Süda su sees olgu juht su ees.</blockquote>
+<p class="attrib en">— a sentence I wrote when I was still a child</p>
+<p class="attrib et">— lause, mille kirjutasin juba lapsena</p>
+</div>
+</section>
+
+<!-- THE MALAMBO STORY -->
+<section class="story">
+<div class="w-narrow fade">
+<span class="tag-sm en">Where the flame came back</span>
+<span class="tag-sm et">Kus leek tuli tagasi</span>
+
+<h2 class="en">In a town called Sunset, in Argentina,<br>I watched men dance malambo every day.</h2>
+<h2 class="et">Argentiinas, linnas, mille nimi oli Sunset,<br>vaatasin iga päev, kuidas mehed tantsisid malambot.</h2>
+
+<div class="body-text">
+<p class="en">They were not performing for anyone in particular. They danced because the dance lived in them, and the earth beneath their boots asked for it. The audience was small, grateful, curious. The drums spoke an older language. And something in me, that had been quiet for too long, stood up and listened.</p>
+<p class="en">That was the moment I remembered. Who I am. Why I was born into this world. What I came here to create. How important it is to keep growing inwardly, to keep reaching with your senses toward the sky while your feet stay rooted to the earth. The balance of soil and stars. That is the whole secret.</p>
+<p class="en">I did not need a teacher to tell me. I needed a rhythm that was honest enough to wake me up. Malambo did that. My children do that. Vietnamese mornings do that. And now, this place — built slowly, with love and with care — is my way of offering the same to you.</p>
+
+<p class="et">Nad ei tantsinud kellelegi kindlale. Nad tantsisid, sest tants elas nende sees ja maa nende saabaste all nõudis seda. Publik oli väike, tänulik, uudishimulik. Trummid rääkisid vanemat keelt. Ja miski minus, mis oli liiga kaua vaikinud, tõusis üles ja kuulas.</p>
+<p class="et">See oli hetk, mil tuletasin meelde. Kes ma olen. Miks olen siia ilma sündinud. Mida tulin siia looma. Kui oluline on hingelises kasvamises püsida, meeltega kosmose poole sirutuda ja samal ajal jalgadega maa peal olla. Maa ja tähtede tasakaal. Kogu saladus on seal.</p>
+<p class="et">Mul ei olnud vaja õpetajat, kes seda mulle oleks öelnud. Mul oli vaja rütmi, mis oli nii aus, et äratas mu üles. Malambo tegi seda. Mu lapsed teevad seda. Vietnami hommikud teevad seda. Ja nüüd see koht — ehitatud aeglaselt, armastusega ja hoolega — on minu viis seda sama sulle pakkuda.</p>
+</div>
+</div>
+</section>
+
+<!-- INVITATION — the gentle turn -->
+<section class="sec sec-bordered">
+<div class="w-narrow fade">
+<span class="tag-sm en">A quiet invitation</span>
+<span class="tag-sm et">Vaikne kutse</span>
+
+<h2 class="sh en">I cannot save anyone.<em>But I can walk with my own light on.</em></h2>
+<h2 class="sh et">Ma ei saa päästa kedagi.<em>Aga ma saan kõndida oma valgusega põlemas.</em></h2>
+
+<div class="body-text">
+<p class="en">This is one of the few truths I hold without doubt: no one rescues anyone. What we <em>can</em> do is walk our own path honestly — let our own flame burn bright enough that someone, seeing us, remembers they have one too. Not as a lesson. Not as a claim. Just as a light across the water.</p>
+<p class="en">So I do not come here to teach. I come here to live — out loud, in words, with a full heart — and to let that living be a small mirror for you. When you see something luminous in me, you are not seeing me. You are seeing something in yourself that has been waiting a long time to be noticed.</p>
+<p class="en">Laughter is contagious. So is the quiet ring of a soul remembering itself. I trust that more than any advice I could ever give.</p>
+
+<p class="et">See on üks väheseid tõdesid, mida hoian kahtluseta: keegi ei päästa kedagi. Mida me <em>saame</em> teha — on kõndida oma teed ausalt, lasta oma leegil põleda nii, et keegi, kes meid näeb, tuletab endale meelde, et temalgi on üks. Mitte õppetunnina. Mitte väitena. Lihtsalt valgusena üle vee.</p>
+<p class="et">Seepärast ei tule ma siia õpetama. Ma tulen siia elama — kõva häälega, sõnadega, täie südamega — ja lasen sellel elamisel olla sulle väike peegel. Kui sa näed minus midagi helgendavat, siis sa ei näe mind. Sa näed midagi iseendas, mis on pikalt oodanud, et keegi selle lõpuks märkaks.</p>
+<p class="et">Naer on nakkav. Samuti on nakkav vaikne helin, mis kostub hingest, kes tuletab endale meelde, kes ta on. Ma usaldan seda rohkem kui ühtegi nõuannet, mida ma kunagi anda saaksin.</p>
+</div>
+</div>
+</section>
+
+<!-- OFFERINGS — two only -->
+<section class="sec sec-bordered" id="off" style="background: var(--bg-alt);">
+<div class="w">
+
+<div class="oh fade">
+<span class="tag-sm en">Letters &amp; Journal</span>
+<span class="tag-sm et">Kirjad &amp; Päevik</span>
+<h2 class="sh en">Two quiet ways<em>to keep me close</em></h2>
+<h2 class="sh et">Kaks vaikset viisi<em>mind endaga hoida</em></h2>
+</div>
+
+<div class="off-grid">
+
+<div class="off-card fade">
+<span class="off-tag en">Free · Weekly</span>
+<span class="off-tag et">Tasuta · Iganädalane</span>
+<h3 class="en">The Lighthouse Letter</h3>
+<h3 class="et">Majaka kiri</h3>
+<p class="en">Once a week, a letter from me lands in your morning. Something I noticed. A thought that would not leave me alone. A small moment with my children, or a sign I caught on a street in Vietnam. Written slowly, with care, so it warms your day instead of adding to its noise.</p>
+<p class="et">Üks kord nädalas jõuab sinu hommikusse minu kiri. Midagi, mida märkasin. Mõte, mis ei jätnud mind rahule. Väike hetk lastega või märk, mis jäi silma Vietnami tänaval. Kirjutatud aeglaselt, hoolega — nii, et see soojendab su päeva, mitte ei lisa sinna müra.</p>
+<div class="off-meta">
+<span class="off-price en">Free</span>
+<span class="off-price et">Tasuta</span>
+<a href="#jn" class="off-cta en">Receive the letter</a>
+<a href="#jn" class="off-cta et">Saa kiri kätte</a>
+</div>
+</div>
+
+<div class="off-card fade">
+<span class="off-tag en">9€ / month · Deeper</span>
+<span class="off-tag et">9€ / kuus · Sügavamalt</span>
+<h3 class="en">Inside the Lighthouse</h3>
+<h3 class="et">Majaka sees</h3>
+<p class="en">For those who want the longer form — the full journal entries, the reflections that were too personal for the open letter, seasonal rituals to mark the year, and a quiet shared space with other women who read the world the way you do. No pressure. No performance. Just warmth that goes deeper.</p>
+<p class="et">Neile, kes tahavad pikemat vormi — päeviku täiemahulisi sissekandeid, mõtisklusi, mis olid avalikuks kirjaks liiga isiklikud, hooajalisi rituaale aasta märgistamiseks ja vaikset jagatud ruumi teiste naistega, kes loevad maailma sarnaselt sinuga. Survet pole. Etendust pole. Ainult soojus, mis läheb sügavamale.</p>
+<div class="off-meta">
+<span class="off-price en">9€ / mo</span>
+<span class="off-price et">9€ / kuus</span>
+<a href="inside-lighthouse.html" class="off-cta en">Step inside</a>
+<a href="inside-lighthouse.html?lang=et" class="off-cta et">Astu sisse</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- JOURNAL — three paths -->
+<section class="sec sec-bordered">
+<div class="w">
+
+<div class="journal-intro fade">
+<span class="tag-sm en">The journal</span>
+<span class="tag-sm et">Päevik</span>
+<h2 class="sh en">Leegi's Journal<em>three paths through the same light</em></h2>
+<h2 class="sh et">Leegi Päevik<em>kolm rada läbi sama valguse</em></h2>
+<p class="en">Life is not lived in chapters — it is lived in moments. The journal is where I keep the ones worth holding. It moves along three paths, and a reader can follow whichever calls.</p>
+<p class="et">Elu ei elata peatükkides — seda elatakse hetkedes. Päevik on see, kuhu hoian alles need, mida tasub hoida. See liigub kolme rada mööda ja iga lugeja võib järgida seda, mis teda kutsub.</p>
+</div>
+
+<div class="paths">
+
+<div class="path fade">
+<span class="path-num">I</span>
+<h3 class="en">Everyday Magic</h3>
+<h3 class="et">Igapäevane maagia</h3>
+<p class="en">The small, luminous, often unnoticed things. A morning smell, a slice of light, a moment with the children that stopped time. Proof that the ordinary is already enchanted, if we are willing to look.</p>
+<p class="et">Väikesed, helkivad, tihti märkamatud asjad. Hommikune lõhn, valguse tükk, hetk lastega, mis peatas aja. Tõendid, et tavaline on juba nõiutud, kui oleme valmis vaatama.</p>
+</div>
+
+<div class="path fade">
+<span class="path-num">II</span>
+<h3 class="en">Recognitions</h3>
+<h3 class="et">Äratundmised</h3>
+<p class="en">Longer reflections. The signs the universe leaves on a chosen path. How to read the inner compass. Questions I ask myself every morning — does this choice, this feeling, this direction match what I most deeply want? The quiet inner yes.</p>
+<p class="et">Pikemad mõtisklused. Märgid, mida universum jätab valitud teele. Kuidas lugeda sisemist kompassi. Küsimused, mida endalt igal hommikul küsin — kas see valik, see tunne, see suund on kooskõlas sellega, mida ma sügaval sisimas tahan? Vaikne sisemine jah.</p>
+</div>
+
+<div class="path fade">
+<span class="path-num">III</span>
+<h3 class="en">Journeys &amp; Places</h3>
+<h3 class="et">Rännakud ja kohad</h3>
+<p class="en">Vietnam, Argentina, Iceland, Chile, Bolivia, New Zealand, Indonesia. Not a travel blog — what each place woke in me, what it taught, what it asked me to leave behind. Places as teachers of a soul's own geography.</p>
+<p class="et">Vietnam, Argentiina, Island, Tšiili, Boliivia, Uus-Meremaa, Indoneesia. Mitte reisiblogi — vaid see, mida iga koht minus äratas, mida õpetas, mida palus maha jätta. Kohad kui hinge enda geograafia õpetajad.</p>
+</div>
+
+</div>
+
+<div class="journal-cta fade">
+<a href="journal.html" class="btn-outline en">Open the Journal →</a>
+<a href="journal.html?lang=et" class="btn-outline et">Ava päevik →</a>
+</div>
+
+</div>
+</section>
+
+<!-- JOIN -->
+<section class="jn" id="jn">
+<div class="w-narrow fade">
+<span class="tag-sm en">One letter · Every week</span>
+<span class="tag-sm et">Üks kiri · Iga nädal</span>
+
+<h2 class="sh en">A letter that feels<br><em>like coming home to yourself</em></h2>
+<h2 class="sh et">Kiri, mis tundub nagu<br><em>enese juurde tagasi tulek</em></h2>
+
+<p class="js en">No spam. No hacks. No ten-steps-to-anything. Just an honest letter from a woman who is learning, every day, to walk with her own light on — and who wants you to walk alongside, not behind.</p>
+<p class="js et">Mitte spämm. Mitte häkid. Mitte kümme sammu millegini. Lihtsalt aus kiri naiselt, kes õpib iga päev oma valgusega kõndima — ja kes tahab, et sa kõnniksid kõrval, mitte taga.</p>
+
+<div class="jf">
+<input type="email" id="em" placeholder="Your email address" aria-label="Email">
+<button type="button" class="jb" onclick="dj()"><span class="en">Receive</span><span class="et">Liitu</span></button>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="f-quote en">Let the heart within be the guide ahead.</div>
+<div class="f-quote et">Süda su sees olgu juht su ees.</div>
+<div class="en">Leegi Majak © 2026</div>
+<div class="et">Leegi Majak © 2026</div>
+<div class="cr"><span class="en">Built with care by</span><span class="et">Loodud hoolega</span> <a href="https://stardi.me" target="_blank" rel="noopener">stardi.me</a></div>
+</footer>
+
+<script>
+var L='en';
+function sl(l){
+  L=l;
+  var a=document.querySelectorAll('.en'), b=document.querySelectorAll('.et'), i;
+  if(l==='en'){
+    for(i=0;i<a.length;i++){a[i].classList.remove('lang-off');a[i].classList.add('lang-on');}
+    for(i=0;i<b.length;i++){b[i].classList.remove('lang-on');b[i].classList.add('lang-off');}
+  }else{
+    for(i=0;i<a.length;i++){a[i].classList.remove('lang-on');a[i].classList.add('lang-off');}
+    for(i=0;i<b.length;i++){b[i].classList.remove('lang-off');b[i].classList.add('lang-on');}
+  }
+  var t=document.querySelectorAll('.lt button');
+  for(i=0;i<t.length;i++) t[i].className=t[i].textContent.trim()===l.toUpperCase()?'on':'';
+  var x=document.getElementById('em');
+  if(x) x.placeholder=l==='en'?'Your email address':'Sinu e-posti aadress';
+  document.documentElement.lang=l;
+}
+var f=document.querySelectorAll('.fade'), o=new IntersectionObserver(function(e){
+  for(var i=0;i<e.length;i++) if(e[i].isIntersecting) e[i].target.classList.add('in');
+},{threshold: 0.12});
+for(var i=0;i<f.length;i++) o.observe(f[i]);
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+});
+function dj(){
+  var e=document.getElementById('em').value;
+  if(e && e.indexOf('@')>0){
+    alert(L==='en'?'Thank you. A letter will find you soon.':'Aitäh. Kiri leiab su varsti üles.');
+    document.getElementById('em').value='';
+  }
+}
+sl('en');
+</script>
+</body>
+</html>
